@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pawel Jacon <pawel@pje.pl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+# dupa
+msgid "&Done"
+msgstr "Zastosuj"
+
+msgid "and next"
+msgstr "i następnie"
+
+msgid "&Done and next"
+msgstr "Zastosuj i następnie"
+
+msgid "ala ma kota "
+msgstr "ala has eny cat"
+
+msgid "aass"
+msgstr "dupa dupa dupa"

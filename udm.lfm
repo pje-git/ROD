@@ -1,0 +1,39 @@
+object DataModuleROD: TDataModuleROD
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 166
+  HorizontalOffset = 1177
+  VerticalOffset = 451
+  Width = 246
+  object MySQLCon: TMySQL55Connection
+    Connected = False
+    LoginPrompt = True
+    AfterConnect = MySQLConAfterConnect
+    AfterDisconnect = MySQLConAfterDisconnect
+    BeforeConnect = MySQLConBeforeConnect
+    DatabaseName = 'rod'
+    KeepConnection = False
+    Password = 'pawel123'
+    Transaction = FGlowny.SQLTransaction1
+    UserName = 'pawel'
+    HostName = 'localhost'
+    OnLog = MySQLConLog
+    LogEvents = []
+    left = 48
+    top = 16
+  end
+  object EventLog1: TEventLog
+    AppendContent = False
+    LogType = ltFile
+    Active = False
+    RaiseExceptionOnError = False
+    DefaultEventType = etCustom
+    FileName = 'd:\Projekty\Lazarus\ROD\log.txt'
+    TimeStampFormat = 'YYYY-MM-DD hh:nn:ss '
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    left = 56
+    top = 80
+  end
+end
