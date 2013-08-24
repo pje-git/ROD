@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pawel Jacon <pawel@pje.pl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: tfglowny.aclose.caption
+msgid "&Koniec"
+msgstr ""
+
+#: tfglowny.adzialkowiec.caption
+msgid "&Działkowiec"
+msgstr ""
+
+#: tfglowny.aenergia.caption
+msgid "&Energia"
+msgstr ""
+
+#: tfglowny.aexport.caption
+msgid "&Eksport"
+msgstr ""
+
+#: tfglowny.aimport.caption
+msgid "&Import"
+msgstr ""
+
+#: tfglowny.asala.caption
+msgid "&Sala"
+msgstr ""
+
+#: tfglowny.asprzedarz.caption
+msgid "&Sprzedarz działki"
+msgstr ""
+
+#: tfglowny.awoda.caption
+msgid "&Woda"
+msgstr ""
+
+#: tfglowny.button1.caption
+msgid "Połącz"
+msgstr ""
+
+#: tfglowny.caption
+msgid "ROD - Zarządzanie"
+msgstr ""
+
+#: tfglowny.edit1.hint
+msgid "Podaj numer działki lub nazwisko właściciela"
+msgstr ""
+
+#: tfglowny.edit1.text
+msgid "Podaj numer"
+msgstr ""
+
+#: tfglowny.edit2.text
+msgid "Edit2"
+msgstr ""
+
+#: tfglowny.label1.caption
+msgctxt "tfglowny.label1.caption"
+msgid "&Działka :"
+msgstr ""
+
+#: tfglowny.label2.caption
+msgctxt "TFGLOWNY.LABEL2.CAPTION"
+msgid "&Działka :"
+msgstr ""
+
+#: tfglowny.lstatus.caption
+msgid "Nie połączono z bazą danych"
+msgstr ""
+
+#: tfglowny.madmin.caption
+msgid "&Administracja"
+msgstr ""
+
+#: tfglowny.mfile.caption
+msgid "&Plik"
+msgstr ""
+
+#: tfglowny.mksiegowosc.caption
+msgid "&Księgowość"
+msgstr ""
+
+#: tfglowny.mmaintenance.caption
+msgid "&Konserwacja"
+msgstr ""
+
+#: tfglowny.mnarzedzia.caption
+msgid "&Narzędzia"
+msgstr ""
+
+#: tfglowny.mobsluga.caption
+msgid "&Obsługa"
+msgstr ""
+
+#: tfglowny.mpomoc.caption
+msgid "&Pomoc"
+msgstr ""
+
+#: tfglowny.mrozliczenia.caption
+msgid "&Rozliczenie"
+msgstr ""
+
+#: tfglowny.msets.caption
+msgid "&Ustawienia"
+msgstr ""
+
+#: tfglowny.mwalne.caption
+msgid "&Walne zebranie"
+msgstr ""
+
+#: tfglowny.mzarzad.caption
+msgid "&Zarząd"
+msgstr ""
+
+#: tfglowny.toolbar1.caption
+msgid "ToolBar1"
+msgstr ""
+
+#: tfglowny.toolbutton1.caption
+msgid "A"
+msgstr ""
+
+#: tfglowny.toolbutton2.caption
+msgid "ToolButton2"
+msgstr ""
+
+#: tfglowny.toolbutton3.caption
+msgid "ToolButton3"
+msgstr ""
+
+#: tfglowny.toolbutton4.caption
+msgid "ToolButton4"
+msgstr ""
+
+#: tfglowny.toolbutton5.caption
+msgid "ToolButton5"
+msgstr ""
