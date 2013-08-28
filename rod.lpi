@@ -13,7 +13,7 @@
     </General>
     <i18n>
       <EnableI18N Value="True"/>
-      <OutDir Value="languages"/>
+      <OutDir Value="languages\pl"/>
     </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
@@ -37,40 +37,46 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="11">
+    <RequiredPackages Count="13">
       <Item1>
-        <PackageName Value="SDFLaz"/>
+        <PackageName Value="pl_fzcontrols"/>
       </Item1>
       <Item2>
-        <PackageName Value="MemDSLaz"/>
+        <PackageName Value="pl_jujiboutils"/>
       </Item2>
       <Item3>
-        <PackageName Value="SynEdit"/>
+        <PackageName Value="SDFLaz"/>
       </Item3>
       <Item4>
-        <PackageName Value="RunTimeTypeInfoControls"/>
+        <PackageName Value="MemDSLaz"/>
       </Item4>
       <Item5>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="SynEdit"/>
       </Item5>
       <Item6>
-        <PackageName Value="TAChartLazarusPkg"/>
+        <PackageName Value="RunTimeTypeInfoControls"/>
       </Item6>
       <Item7>
-        <PackageName Value="TurboPowerIPro"/>
+        <PackageName Value="SQLDBLaz"/>
       </Item7>
       <Item8>
-        <PackageName Value="LazControls"/>
+        <PackageName Value="TAChartLazarusPkg"/>
       </Item8>
       <Item9>
-        <PackageName Value="DBFLaz"/>
+        <PackageName Value="TurboPowerIPro"/>
       </Item9>
       <Item10>
-        <PackageName Value="FCL"/>
+        <PackageName Value="LazControls"/>
       </Item10>
       <Item11>
-        <PackageName Value="LCL"/>
+        <PackageName Value="DBFLaz"/>
       </Item11>
+      <Item12>
+        <PackageName Value="FCL"/>
+      </Item12>
+      <Item13>
+        <PackageName Value="LCL"/>
+      </Item13>
     </RequiredPackages>
     <Units Count="6">
       <Unit0>

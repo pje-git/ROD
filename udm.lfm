@@ -1,16 +1,14 @@
 object DataModuleROD: TDataModuleROD
-  OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 166
   HorizontalOffset = 1177
   VerticalOffset = 451
   Width = 246
   object MySQLCon: TMySQL55Connection
-    Connected = False
+    Connected = True
     LoginPrompt = True
     AfterConnect = MySQLConAfterConnect
     AfterDisconnect = MySQLConAfterDisconnect
-    BeforeConnect = MySQLConBeforeConnect
     DatabaseName = 'rod'
     KeepConnection = False
     Password = 'pawel123'

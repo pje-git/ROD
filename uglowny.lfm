@@ -1,13 +1,14 @@
 object FGlowny: TFGlowny
-  Left = 435
+  Left = 349
   Height = 418
-  Top = 241
-  Width = 679
+  Top = 224
+  Width = 667
   ActiveControl = Edit2
   Caption = 'ROD - Zarządzanie'
   ClientHeight = 398
-  ClientWidth = 679
+  ClientWidth = 667
   Menu = mGlowne
+  OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '1.1'
   object Label1: TLabel
@@ -95,30 +96,20 @@ object FGlowny: TFGlowny
     OnClick = Button1Click
     TabOrder = 3
   end
-  object DBGrid1: TDBGrid
-    Left = 16
-    Height = 176
-    Top = 72
-    Width = 552
-    Color = clWindow
-    Columns = <>
-    DataSource = Datasource1
-    TabOrder = 4
-  end
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
     Top = 375
-    Width = 679
+    Width = 667
     Panels = <>
   end
   object ToolBar1: TToolBar
     Left = 0
     Height = 26
     Top = 0
-    Width = 679
+    Width = 667
     Caption = 'ToolBar1'
-    TabOrder = 6
+    TabOrder = 5
     object ToolButton1: TToolButton
       Left = 1
       Top = 2
@@ -160,7 +151,52 @@ object FGlowny: TFGlowny
     ButtonWidth = 23
     NumGlyphs = 1
     MaxLength = 0
+    TabOrder = 6
+  end
+  object dbgDzialki: TFZDBGrid
+    Left = 8
+    Height = 236
+    Top = 72
+    Width = 656
+    AutoEdit = False
+    Color = clWindow
+    Columns = <    
+      item
+        Alignment = taCenter
+        ButtonStyle = cbsEllipsis
+        Title.Caption = 'Numer'
+        Width = 155
+        FieldName = 'numer'
+      end    
+      item
+        Title.Caption = 'Imię'
+        Width = 155
+        FieldName = 'imie'
+      end    
+      item
+        Title.Caption = 'Nazwisko'
+        Width = 155
+        FieldName = 'nazwisko'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Obszar'
+        Width = 158
+        FieldName = 'obszar'
+      end>
+    DataSource = Datasource1
+    Flat = True
+    Font.CharSet = 4
+    Font.Color = 16384
+    Font.Name = '@Arial Unicode MS'
+    ParentFont = False
     TabOrder = 7
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -13
+    TitleFont.Name = '@Arial Unicode MS'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
   end
   object mGlowne: TMainMenu
     left = 531
@@ -287,15 +323,22 @@ object FGlowny: TFGlowny
     top = 8
   end
   object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
-        Name = 'id_dzialkowiec'
+        Name = 'id_dzialka'
         DataType = ftAutoInc
         Precision = -1
         Size = 0
       end    
       item
-        Name = 'id_dzialka'
+        Name = 'numer'
+        DataType = ftString
+        Precision = -1
+        Size = 8
+      end    
+      item
+        Name = 'metraz'
         DataType = ftInteger
         Precision = -1
         Size = 0
@@ -311,95 +354,12 @@ object FGlowny: TFGlowny
         DataType = ftString
         Precision = -1
         Size = 64
-      end    
-      item
-        Name = 'adr_miejscowosc'
-        DataType = ftString
-        Precision = -1
-        Size = 64
-      end    
-      item
-        Name = 'adr_ulica'
-        DataType = ftString
-        Precision = -1
-        Size = 64
-      end    
-      item
-        Name = 'adr_nrbudynku'
-        DataType = ftString
-        Precision = -1
-        Size = 10
-      end    
-      item
-        Name = 'adr_nrlokalu'
-        DataType = ftString
-        Precision = -1
-        Size = 10
-      end    
-      item
-        Name = 'telefon1'
-        DataType = ftString
-        Precision = -1
-        Size = 30
-      end    
-      item
-        Name = 'telefon2'
-        DataType = ftString
-        Precision = -1
-        Size = 30
-      end    
-      item
-        Name = 'email'
-        DataType = ftString
-        Precision = -1
-        Size = 30
-      end    
-      item
-        Name = 'info'
-        DataType = ftString
-        Precision = -1
-        Size = 255
-      end    
-      item
-        Name = 'aktywny'
-        DataType = ftInteger
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = 'aktywny_od'
-        DataType = ftInteger
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = 'aktywny_do'
-        DataType = ftInteger
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = 'created'
-        DataType = ftInteger
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = 'last_mod'
-        DataType = ftInteger
-        Precision = -1
-        Size = 0
-      end    
-      item
-        Name = 'who_mod'
-        DataType = ftString
-        Precision = -1
-        Size = 128
       end>
+    BeforeClose = SQLQuery1BeforeClose
     Database = DataModuleROD.MySQLCon
-    Transaction = SQLTransaction1
     SQL.Strings = (
-      'select * from pjrod_dzialkowiec'
+      'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
+      'where da.id_dzialka=dc.id_dzialka'
     )
     Params = <>
     left = 616
@@ -408,10 +368,10 @@ object FGlowny: TFGlowny
   object Datasource1: TDatasource
     DataSet = SQLQuery1
     left = 616
-    top = 64
+    top = 72
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Action = caNone
     Database = DataModuleROD.MySQLCon
     left = 616
