@@ -8,7 +8,6 @@ object FGlowny: TFGlowny
   ClientHeight = 398
   ClientWidth = 667
   Menu = mGlowne
-  OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '1.1'
   object Label1: TLabel
@@ -357,6 +356,7 @@ object FGlowny: TFGlowny
       end>
     BeforeClose = SQLQuery1BeforeClose
     Database = DataModuleROD.MySQLCon
+    Transaction = SQLTransaction1
     SQL.Strings = (
       'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
       'where da.id_dzialka=dc.id_dzialka'
