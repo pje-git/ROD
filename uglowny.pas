@@ -7,8 +7,7 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
-  JDBGridControl, udm, PJGlobal, Classes;
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, udm, PJGlobal, Classes;
 
 type
 
@@ -25,14 +24,11 @@ type
     aEnergia: TAction;
     alGlowny: TActionList;
     Button1: TButton;
-    CalcEdit1: TCalcEdit;
     Datasource1: TDatasource;
     Edit1: TEdit;
-    Edit2: TEdit;
-    dbgDzialki: TFZDBGrid;
+    dbgDzialki: TDBGrid;
     IniGeneralSettings: TIniPropStorage;
     Label1: TLabel;
-    Label2: TLabel;
     lStatus: TLabel;
     mSets: TMenuItem;
     mAdmin: TMenuItem;
@@ -57,7 +53,6 @@ type
     pStatus: TPanel;
     rStatus: TShape;
     SQLQuery1: TSQLQuery;
-    SQLTransaction1: TSQLTransaction;
     StatusBar1: TStatusBar;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
@@ -68,6 +63,7 @@ type
     procedure aSprzedarzExecute(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Edit1Enter(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mSprzedarzClick(Sender: TObject);
     procedure SQLQuery1BeforeClose(DataSet: TDataSet);
@@ -122,8 +118,8 @@ begin
     dbgDzialki.Refresh;
   end else begin
 //    SQLTransaction1.Commit;
-    SQLTransaction1.EndTransaction;
-    SQLTransaction1.Active:=FALSE;
+//    SQLTransaction1.EndTransaction;
+//    SQLTransaction1.Active:=FALSE;
 //    SQLQuery1.Active:=FALSE;
     Datasource1.Enabled:=FALSE;
     Connected:=False;
@@ -154,6 +150,15 @@ end;
 procedure TFGlowny.Edit1Enter(Sender: TObject);
 begin
   if Edit1.Text = 'Podaj numer' then Edit1.Text := '';
+end;
+
+procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+//  SQLTransaction1.EndTransaction;
+//  SQLTransaction1.Commit;
+//  SQLTransaction1.Active:=FALSE;
+  Datasource1.Enabled:=FALSE;
+  SQLQuery1.Active:=FALSE;
 end;
 
 

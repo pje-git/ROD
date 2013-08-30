@@ -9,7 +9,7 @@
         <Filename Value="rod.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="rod"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="21"/>
@@ -24,10 +24,10 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UGlowny"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="133"/>
-        <CursorPos X="22" Y="113"/>
+        <TopLine Value="135"/>
+        <CursorPos X="3" Y="159"/>
         <UsageCount Value="238"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -39,7 +39,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UEnergia"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="61" Y="11"/>
@@ -54,10 +54,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UDM"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="75" Y="66"/>
+        <TopLine Value="10"/>
+        <CursorPos X="43" Y="21"/>
         <UsageCount Value="218"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -66,23 +66,19 @@
         <Filename Value="pjglobal.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="PJGlobal"/>
-        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="11" Y="11"/>
         <UsageCount Value="300"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="ustringspl.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uStringsPL"/>
-        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="13"/>
         <UsageCount Value="247"/>
-        <Loaded Value="True"/>
       </Unit5>
     </Units>
     <General>
@@ -91,125 +87,124 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="127" Column="1" TopLine="103"/>
+        <Caret Line="120" Column="1" TopLine="102"/>
       </Position1>
       <Position2>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="129" Column="1" TopLine="105"/>
+        <Caret Line="121" Column="1" TopLine="102"/>
       </Position2>
       <Position3>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="71" Column="1" TopLine="65"/>
+        <Caret Line="122" Column="1" TopLine="102"/>
       </Position3>
       <Position4>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="141" Column="1" TopLine="126"/>
+        <Caret Line="131" Column="1" TopLine="118"/>
       </Position4>
       <Position5>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="116" Column="1" TopLine="102"/>
+        <Caret Line="152" Column="1" TopLine="133"/>
       </Position5>
       <Position6>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="125" Column="1" TopLine="102"/>
+        <Caret Line="151" Column="1" TopLine="133"/>
       </Position6>
       <Position7>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="126" Column="1" TopLine="102"/>
+        <Caret Line="116" Column="1" TopLine="102"/>
       </Position7>
       <Position8>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="128" Column="1" TopLine="104"/>
+        <Caret Line="125" Column="1" TopLine="102"/>
       </Position8>
       <Position9>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="129" Column="1" TopLine="105"/>
+        <Caret Line="126" Column="1" TopLine="102"/>
       </Position9>
       <Position10>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="131" Column="1" TopLine="107"/>
+        <Caret Line="128" Column="1" TopLine="104"/>
       </Position10>
       <Position11>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="142" Column="1" TopLine="128"/>
+        <Caret Line="129" Column="1" TopLine="105"/>
       </Position11>
       <Position12>
-        <Filename Value="rod.lpr"/>
-        <Caret Line="20" Column="1" TopLine="1"/>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="131" Column="1" TopLine="107"/>
       </Position12>
       <Position13>
-        <Filename Value="rod.lpr"/>
-        <Caret Line="21" Column="1" TopLine="1"/>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="107" Column="76" TopLine="107"/>
       </Position13>
       <Position14>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="151" Column="1" TopLine="128"/>
+        <Caret Line="164" Column="1" TopLine="139"/>
       </Position14>
       <Position15>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="116" Column="1" TopLine="102"/>
+        <Caret Line="163" Column="1" TopLine="142"/>
       </Position15>
       <Position16>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="117" Column="1" TopLine="102"/>
+        <Caret Line="164" Column="1" TopLine="142"/>
       </Position16>
       <Position17>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="118" Column="1" TopLine="102"/>
+        <Caret Line="165" Column="1" TopLine="142"/>
       </Position17>
       <Position18>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="119" Column="1" TopLine="102"/>
+        <Caret Line="166" Column="19" TopLine="143"/>
       </Position18>
       <Position19>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="120" Column="1" TopLine="102"/>
+        <Caret Line="163" Column="1" TopLine="143"/>
       </Position19>
       <Position20>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="1" TopLine="102"/>
+        <Caret Line="164" Column="1" TopLine="143"/>
       </Position20>
       <Position21>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="1" TopLine="102"/>
+        <Caret Line="165" Column="1" TopLine="143"/>
       </Position21>
       <Position22>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="131" Column="1" TopLine="118"/>
+        <Caret Line="166" Column="1" TopLine="143"/>
       </Position22>
       <Position23>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="152" Column="1" TopLine="133"/>
+        <Caret Line="12" Column="60" TopLine="1"/>
       </Position23>
       <Position24>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="151" Column="1" TopLine="133"/>
+        <Caret Line="21" Column="78" TopLine="1"/>
       </Position24>
       <Position25>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="116" Column="1" TopLine="102"/>
+        <Caret Line="14" Column="43" TopLine="26"/>
       </Position25>
       <Position26>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="125" Column="1" TopLine="102"/>
+        <Caret Line="33" Column="17" TopLine="27"/>
       </Position26>
       <Position27>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="126" Column="1" TopLine="102"/>
+        <Caret Line="34" Column="18" TopLine="27"/>
       </Position27>
       <Position28>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="128" Column="1" TopLine="104"/>
+        <Caret Line="14" Column="24" TopLine="31"/>
       </Position28>
       <Position29>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="129" Column="1" TopLine="105"/>
+        <Caret Line="29" Column="27" TopLine="19"/>
       </Position29>
       <Position30>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="131" Column="1" TopLine="107"/>
+        <Caret Line="122" Column="3" TopLine="106"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
-  <EditorMacros Count="0"/>
 </CONFIG>
