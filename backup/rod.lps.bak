@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="rod.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="rod"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="19" Y="19"/>
+        <UsageCount Value="238"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uglowny.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FGlowny"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UGlowny"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="92"/>
+        <CursorPos X="57" Y="73"/>
+        <UsageCount Value="238"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="uenergia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UEnergia"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="23" Y="15"/>
+        <UsageCount Value="218"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="udm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModuleROD"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UDM"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="35" Y="46"/>
+        <UsageCount Value="218"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="pjglobal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PJGlobal"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3"/>
+        <CursorPos X="26" Y="25"/>
+        <UsageCount Value="300"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpash.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="177"/>
+        <CursorPos X="23" Y="192"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpas.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="259"/>
+        <CursorPos X="9" Y="259"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="12" HistoryIndex="11">
+      <Position1>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="16" Column="1" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="17" Column="1" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="18" Column="1" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="19" Column="1" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="32" Column="10" TopLine="26"/>
+      </Position5>
+      <Position6>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="20" Column="1" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="110" Column="3" TopLine="95"/>
+      </Position7>
+      <Position8>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="98" Column="27" TopLine="78"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="92" Column="100" TopLine="78"/>
+      </Position9>
+      <Position10>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="91" Column="100" TopLine="77"/>
+      </Position10>
+      <Position11>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="130" Column="1" TopLine="94"/>
+      </Position11>
+      <Position12>
+        <Filename Value="pjglobal.pas"/>
+        <Caret Line="18" Column="21" TopLine="3"/>
+      </Position12>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>

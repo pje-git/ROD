@@ -1,0 +1,34 @@
+unit PJGlobal;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils;
+
+type
+
+  { TGlobalRec }
+
+  TGlobalRec = class(TObject)
+    globalpStatus: ^String;
+    globalStatusPin: ^byte;
+    public
+        Constructor Create(Sender: TObject);
+  end;
+
+implementation
+
+
+  { TGlobalRec }
+
+  constructor TGlobalRec.Create(Sender: TObject);
+  begin
+    inherited Create;
+    new(globalStatusPin);
+    globalStatusPin^:=0;
+  end;
+
+end.
+

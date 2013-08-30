@@ -1,0 +1,380 @@
+object FGlowny: TFGlowny
+  Left = 349
+  Height = 418
+  Top = 224
+  Width = 667
+  ActiveControl = Edit2
+  Caption = 'ROD - Zarządzanie'
+  ClientHeight = 398
+  ClientWidth = 667
+  Menu = mGlowne
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.1'
+  object Label1: TLabel
+    Left = 16
+    Height = 18
+    Top = 8
+    Width = 60
+    Caption = '&Działka :'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 88
+    Height = 23
+    Hint = 'Podaj numer działki lub nazwisko właściciela'
+    Top = 4
+    Width = 80
+    OnClick = Edit1Enter
+    OnEnter = Edit1Enter
+    TabOrder = 0
+    Text = 'Podaj numer'
+  end
+  object Edit2: TEdit
+    Left = 88
+    Height = 23
+    Top = 32
+    Width = 80
+    TabOrder = 1
+    Text = 'Edit2'
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 18
+    Top = 36
+    Width = 60
+    Caption = '&Działka :'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object pStatus: TPanel
+    Left = 8
+    Height = 26
+    Top = 344
+    Width = 552
+    ClientHeight = 26
+    ClientWidth = 552
+    TabOrder = 2
+    object rStatus: TShape
+      Left = 8
+      Height = 16
+      Top = 4
+      Width = 17
+      Brush.Color = clRed
+      Pen.Color = clBackground
+      Pen.EndCap = pecFlat
+      Shape = stRoundRect
+    end
+    object lStatus: TLabel
+      Left = 40
+      Height = 15
+      Top = 4
+      Width = 153
+      Caption = 'Nie połączono z bazą danych'
+      ParentColor = False
+    end
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'Połącz'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 375
+    Width = 667
+    Panels = <>
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 667
+    Caption = 'ToolBar1'
+    TabOrder = 5
+    object ToolButton1: TToolButton
+      Left = 1
+      Top = 2
+      AutoSize = True
+      Caption = 'A'
+      OnClick = ToolButton1Click
+    end
+    object ToolButton2: TToolButton
+      Left = 24
+      Top = 2
+      Caption = 'ToolButton2'
+    end
+    object ToolButton3: TToolButton
+      Left = 47
+      Top = 2
+      Caption = 'ToolButton3'
+    end
+    object ToolButton4: TToolButton
+      Left = 70
+      Top = 2
+      Caption = 'ToolButton4'
+    end
+    object ToolButton5: TToolButton
+      Left = 93
+      Top = 2
+      Width = 10
+      Caption = 'ToolButton5'
+      Style = tbsSeparator
+    end
+  end
+  object CalcEdit1: TCalcEdit
+    Left = 184
+    Height = 23
+    Top = 32
+    Width = 80
+    CalculatorLayout = clNormal
+    AsFloat = 0
+    AsInteger = 0
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 6
+  end
+  object dbgDzialki: TFZDBGrid
+    Left = 8
+    Height = 236
+    Top = 72
+    Width = 656
+    AutoEdit = False
+    Color = clWindow
+    Columns = <    
+      item
+        Alignment = taCenter
+        ButtonStyle = cbsEllipsis
+        Title.Caption = 'Numer'
+        Width = 155
+        FieldName = 'numer'
+      end    
+      item
+        Title.Caption = 'Imię'
+        Width = 155
+        FieldName = 'imie'
+      end    
+      item
+        Title.Caption = 'Nazwisko'
+        Width = 155
+        FieldName = 'nazwisko'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Obszar'
+        Width = 158
+        FieldName = 'obszar'
+      end>
+    DataSource = Datasource1
+    Flat = True
+    Font.CharSet = 4
+    Font.Color = 16384
+    Font.Name = '@Arial Unicode MS'
+    ParentFont = False
+    TabOrder = 7
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Height = -13
+    TitleFont.Name = '@Arial Unicode MS'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+  end
+  object mGlowne: TMainMenu
+    left = 531
+    top = 8
+    object mFile: TMenuItem
+      Caption = '&Plik'
+      object mImport: TMenuItem
+        Action = aImport
+      end
+      object mExport: TMenuItem
+        Action = aExport
+      end
+      object mClose: TMenuItem
+        Action = aClose
+      end
+    end
+    object mRozliczenia: TMenuItem
+      Caption = '&Rozliczenie'
+      object mDzialkowiec: TMenuItem
+        Action = aDzialkowiec
+      end
+      object mWoda: TMenuItem
+        Action = aWoda
+      end
+      object mPrad: TMenuItem
+        Action = aEnergia
+      end
+      object mSala: TMenuItem
+        Action = aSala
+      end
+    end
+    object mObsluga: TMenuItem
+      Caption = '&Obsługa'
+      object mSprzedarz: TMenuItem
+        Action = aSprzedarz
+        OnClick = mSprzedarzClick
+      end
+      object mWalne: TMenuItem
+        Caption = '&Walne zebranie'
+      end
+      object mZarzad: TMenuItem
+        Caption = '&Zarząd'
+      end
+    end
+    object mKsiegowosc: TMenuItem
+      Caption = '&Księgowość'
+    end
+    object mNarzedzia: TMenuItem
+      Caption = '&Narzędzia'
+      RightJustify = True
+      object mSets: TMenuItem
+        Caption = '&Ustawienia'
+        ShortCut = 16469
+      end
+      object mAdmin: TMenuItem
+        Caption = '&Administracja'
+      end
+      object mMaintenance: TMenuItem
+        Caption = '&Konserwacja'
+      end
+    end
+    object mPomoc: TMenuItem
+      Caption = '&Pomoc'
+      RightJustify = True
+      ShortCut = 112
+    end
+  end
+  object alGlowny: TActionList
+    left = 496
+    top = 8
+    object aEnergia: TAction
+      Caption = '&Energia'
+    end
+    object aWoda: TAction
+      Caption = '&Woda'
+    end
+    object aSala: TAction
+      Caption = '&Sala'
+    end
+    object aDzialkowiec: TAction
+      Caption = '&Działkowiec'
+    end
+    object aImport: TAction
+      Caption = '&Import'
+    end
+    object aExport: TAction
+      Caption = '&Eksport'
+    end
+    object aClose: TAction
+      Caption = '&Koniec'
+      ShortCut = 16472
+    end
+    object aSprzedarz: TAction
+      Caption = '&Sprzedarz działki'
+      OnExecute = aSprzedarzExecute
+      ShortCut = 16464
+    end
+  end
+  object IniGeneralSettings: TIniPropStorage
+    StoredValues = <    
+      item
+        Name = 'mySQLSerwer'
+        Value = 'localhost'
+        KeyString = 'mySQLSerwer'
+      end    
+      item
+        Name = 'mySQLDBName'
+        Value = 'rod'
+        KeyString = 'mySQLDBName'
+      end    
+      item
+        Name = 'mySQLUserName'
+        Value = 'pawel'
+        KeyString = 'mySQLUserName'
+      end    
+      item
+        Name = 'mySQLUserPass'
+        Value = 'pawel123'
+        KeyString = 'mySQLUserPass'
+      end>
+    IniFileName = 'rod.ini'
+    IniSection = 'GENERAL_SETTINGS'
+    left = 464
+    top = 8
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'id_dzialka'
+        DataType = ftAutoInc
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'numer'
+        DataType = ftString
+        Precision = -1
+        Size = 8
+      end    
+      item
+        Name = 'metraz'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'imie'
+        DataType = ftString
+        Precision = -1
+        Size = 32
+      end    
+      item
+        Name = 'nazwisko'
+        DataType = ftString
+        Precision = -1
+        Size = 64
+      end>
+    BeforeClose = SQLQuery1BeforeClose
+    Database = DataModuleROD.MySQLCon
+    SQL.Strings = (
+      'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
+      'where da.id_dzialka=dc.id_dzialka'
+    )
+    Params = <>
+    left = 616
+    top = 8
+  end
+  object Datasource1: TDatasource
+    DataSet = SQLQuery1
+    left = 616
+    top = 72
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Action = caNone
+    Database = DataModuleROD.MySQLCon
+    left = 616
+    top = 120
+  end
+end
