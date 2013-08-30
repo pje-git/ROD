@@ -7,8 +7,8 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
-  JDBGridControl, udm, PJGlobal, Classes;
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker,
+  ubarcodes, cyColorMatrix, FZDB, JDBGridControl, udm, PJGlobal, Classes;
 
 type
 
@@ -25,10 +25,8 @@ type
     aEnergia: TAction;
     alGlowny: TActionList;
     Button1: TButton;
-    CalcEdit1: TCalcEdit;
     Datasource1: TDatasource;
     Edit1: TEdit;
-    Edit2: TEdit;
     dbgDzialki: TFZDBGrid;
     IniGeneralSettings: TIniPropStorage;
     Label1: TLabel;
@@ -123,10 +121,7 @@ begin
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
-  SQLTransaction1.EndTransaction;
-  SQLTransaction1.Active:=FALSE;
-  SQLTransaction1.EndTransaction;
-  ConnectToMySQL55;
+//  ConnectToMySQL55;
 end;
 
 procedure TFGlowny.aSprzedarzExecute(Sender: TObject);

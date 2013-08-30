@@ -20,7 +20,7 @@
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="1"/>
+      <BuildNr Value="2"/>
       <Language Value="0415"/>
       <StringTable Comments="Projekt do zarządzania ROD w Trzy Korony w Pabianicach" CompanyName="PJE" FileDescription="Projekt dla ROD Trzy Korony w Pabianicach" InternalName="ROD" LegalCopyright="PJE" LegalTrademarks="PJE" OriginalFilename="PJE ROD" ProductName="ROD Kompleksowy System Zarządzania" ProductVersion="1.0"/>
     </VersionInfo>
@@ -37,46 +37,52 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="13">
+    <RequiredPackages Count="15">
       <Item1>
-        <PackageName Value="pl_fzcontrols"/>
+        <PackageName Value="pl_lazbarcodes"/>
       </Item1>
       <Item2>
-        <PackageName Value="pl_jujiboutils"/>
+        <PackageName Value="pl_cindy"/>
       </Item2>
       <Item3>
-        <PackageName Value="SDFLaz"/>
+        <PackageName Value="pl_fzcontrols"/>
       </Item3>
       <Item4>
-        <PackageName Value="MemDSLaz"/>
+        <PackageName Value="pl_jujiboutils"/>
       </Item4>
       <Item5>
-        <PackageName Value="SynEdit"/>
+        <PackageName Value="SDFLaz"/>
       </Item5>
       <Item6>
-        <PackageName Value="RunTimeTypeInfoControls"/>
+        <PackageName Value="MemDSLaz"/>
       </Item6>
       <Item7>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="SynEdit"/>
       </Item7>
       <Item8>
-        <PackageName Value="TAChartLazarusPkg"/>
+        <PackageName Value="RunTimeTypeInfoControls"/>
       </Item8>
       <Item9>
-        <PackageName Value="TurboPowerIPro"/>
+        <PackageName Value="SQLDBLaz"/>
       </Item9>
       <Item10>
-        <PackageName Value="LazControls"/>
+        <PackageName Value="TAChartLazarusPkg"/>
       </Item10>
       <Item11>
-        <PackageName Value="DBFLaz"/>
+        <PackageName Value="TurboPowerIPro"/>
       </Item11>
       <Item12>
-        <PackageName Value="FCL"/>
+        <PackageName Value="LazControls"/>
       </Item12>
       <Item13>
-        <PackageName Value="LCL"/>
+        <PackageName Value="DBFLaz"/>
       </Item13>
+      <Item14>
+        <PackageName Value="FCL"/>
+      </Item14>
+      <Item15>
+        <PackageName Value="LCL"/>
+      </Item15>
     </RequiredPackages>
     <Units Count="6">
       <Unit0>

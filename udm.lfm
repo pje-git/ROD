@@ -1,8 +1,8 @@
 object DataModuleROD: TDataModuleROD
   OldCreateOrder = False
   Height = 166
-  HorizontalOffset = 1177
-  VerticalOffset = 451
+  HorizontalOffset = 770
+  VerticalOffset = 542
   Width = 246
   object MySQLCon: TMySQL55Connection
     Connected = True
@@ -14,6 +14,7 @@ object DataModuleROD: TDataModuleROD
     Password = 'pawel123'
     Transaction = FGlowny.SQLTransaction1
     UserName = 'pawel'
+    CharSet = 'UTF8'
     HostName = 'localhost'
     OnLog = MySQLConLog
     LogEvents = []
