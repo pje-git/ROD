@@ -1,10 +1,20 @@
 object FGlowny: TFGlowny
+<<<<<<< HEAD
   Left = 225
   Height = 423
   Top = 166
   Width = 667
   Caption = 'ROD - Zarządzanie'
   ClientHeight = 404
+=======
+  Left = 349
+  Height = 418
+  Top = 224
+  Width = 667
+  ActiveControl = Edit2
+  Caption = 'ROD - Zarządzanie'
+  ClientHeight = 398
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
   ClientWidth = 667
   Menu = mGlowne
   OnClose = FormClose
@@ -85,12 +95,21 @@ object FGlowny: TFGlowny
     Width = 75
     Caption = 'Połącz'
     OnClick = Button1Click
+<<<<<<< HEAD
     TabOrder = 2
   end
   object StatusBar1: TStatusBar
     Left = 0
     Height = 20
     Top = 384
+=======
+    TabOrder = 3
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 375
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
     Width = 667
     Panels = <>
   end
@@ -100,7 +119,11 @@ object FGlowny: TFGlowny
     Top = 0
     Width = 667
     Caption = 'ToolBar1'
+<<<<<<< HEAD
     TabOrder = 4
+=======
+    TabOrder = 5
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
     object ToolButton1: TToolButton
       Left = 1
       Top = 2
@@ -131,6 +154,22 @@ object FGlowny: TFGlowny
       Style = tbsSeparator
     end
   end
+<<<<<<< HEAD
+=======
+  object CalcEdit1: TCalcEdit
+    Left = 184
+    Height = 23
+    Top = 32
+    Width = 80
+    CalculatorLayout = clNormal
+    AsFloat = 0
+    AsInteger = 0
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 6
+  end
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
   object dbgDzialki: TFZDBGrid
     Left = 8
     Height = 236
@@ -164,17 +203,29 @@ object FGlowny: TFGlowny
       end>
     DataSource = Datasource1
     Flat = True
+<<<<<<< HEAD
     Font.Name = 'Gill Sans MT Condensed'
     ParentFont = False
     TabOrder = 5
     TitleFont.CharSet = ANSI_CHARSET
     TitleFont.Color = 16384
+=======
+    Font.CharSet = 4
+    Font.Color = 16384
+    Font.Name = '@Arial Unicode MS'
+    ParentFont = False
+    TabOrder = 7
+    TitleFont.CharSet = ANSI_CHARSET
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
     TitleFont.Height = -13
     TitleFont.Name = '@Arial Unicode MS'
     TitleFont.Pitch = fpVariable
     TitleFont.Quality = fqDraft
     TitleFont.Style = [fsBold]
+<<<<<<< HEAD
     UseXORFeatures = True
+=======
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
   end
   object mGlowne: TMainMenu
     left = 531
@@ -306,10 +357,26 @@ object FGlowny: TFGlowny
       item
         Name = 'id_dzialka'
         DataType = ftAutoInc
+<<<<<<< HEAD
+=======
         Precision = -1
         Size = 0
       end    
       item
+        Name = 'numer'
+        DataType = ftString
+        Precision = -1
+        Size = 8
+      end    
+      item
+        Name = 'metraz'
+        DataType = ftInteger
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
+        Precision = -1
+        Size = 0
+      end    
+      item
+<<<<<<< HEAD
         Name = 'numer'
         DataType = ftString
         Precision = -1
@@ -326,14 +393,25 @@ object FGlowny: TFGlowny
         DataType = ftString
         Precision = -1
         Size = 96
+=======
+        Name = 'imie'
+        DataType = ftString
+        Precision = -1
+        Size = 32
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
       end    
       item
         Name = 'nazwisko'
         DataType = ftString
         Precision = -1
+<<<<<<< HEAD
         Size = 192
       end>
     Active = True
+=======
+        Size = 64
+      end>
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
     BeforeClose = SQLQuery1BeforeClose
     Database = DataModuleROD.MySQLCon
     Transaction = SQLTransaction1

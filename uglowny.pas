@@ -7,8 +7,13 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
+<<<<<<< HEAD
   IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker,
   ubarcodes, cyColorMatrix, FZDB, JDBGridControl, udm, PJGlobal, Classes;
+=======
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
+  JDBGridControl, udm, PJGlobal, Classes;
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
 
 type
 
@@ -27,6 +32,10 @@ type
     Button1: TButton;
     Datasource1: TDatasource;
     Edit1: TEdit;
+<<<<<<< HEAD
+=======
+    Edit2: TEdit;
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
     dbgDzialki: TFZDBGrid;
     IniGeneralSettings: TIniPropStorage;
     Label1: TLabel;
@@ -102,8 +111,13 @@ end;
 
 procedure TFGlowny.SQLQuery1BeforeClose(DataSet: TDataSet);
 begin
+<<<<<<< HEAD
   SQLTransaction1.CloseDataSets;
   SQLTransaction1.EndTransaction;
+=======
+//  SQLTransaction1.CloseDataSets;
+//  SQLTransaction1.EndTransaction;
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
 end;
 procedure TFGlowny.ToolButton1Click(Sender: TObject);
 begin
@@ -112,8 +126,26 @@ end;
 
 procedure TFGlowny.ConnectToMySQL55;
 begin
+<<<<<<< HEAD
   with DataModuleROD.MySQLCon do if Connected = FALSE then Connected:=True
     else Connected:=False;
+=======
+  with DataModuleROD.MySQLCon do if Connected = FALSE then begin
+    Connected:=True;
+    SQLQuery1.ExecSQL;
+    SQLQuery1.Active:=TRUE;
+    Datasource1.Enabled:=TRUE;
+    dbgDzialki.Enabled:=TRUE;
+    dbgDzialki.Refresh;
+  end else begin
+//    SQLTransaction1.Commit;
+    SQLTransaction1.EndTransaction;
+    SQLTransaction1.Active:=FALSE;
+//    SQLQuery1.Active:=FALSE;
+    Datasource1.Enabled:=FALSE;
+    Connected:=False;
+  end;
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
 end;
 
 procedure TFGlowny.FormCreate(Sender: TObject);
@@ -121,7 +153,14 @@ begin
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
+<<<<<<< HEAD
 //  ConnectToMySQL55;
+=======
+//  SQLTransaction1.EndTransaction;
+//  SQLTransaction1.Active:=FALSE;
+//  SQLTransaction1.EndTransaction;
+  ConnectToMySQL55;
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
 end;
 
 procedure TFGlowny.aSprzedarzExecute(Sender: TObject);
@@ -132,6 +171,7 @@ end;
 procedure TFGlowny.Button1Click(Sender: TObject);
 begin
   ConnectToMySQL55;
+<<<<<<< HEAD
   if DataModuleROD.MySQLCon.Connected then begin
     SQLQuery1.ExecSQL;
     SQLQuery1.Active:=TRUE;
@@ -144,6 +184,8 @@ begin
     SQLQuery1.Active:=FALSE;
     Datasource1.Enabled:=FALSE;
   end;
+=======
+>>>>>>> 70303821dda509e93813266eb4b31400b82b2851
 end;
 
 procedure TFGlowny.Edit1Enter(Sender: TObject);
