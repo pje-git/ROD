@@ -7,8 +7,8 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, udm,
-  PJGlobal, Classes;
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
+  JDBGridControl, udm, PJGlobal, Classes;
 
 type
 
@@ -27,9 +27,9 @@ type
     Button1: TButton;
     CalcEdit1: TCalcEdit;
     Datasource1: TDatasource;
-    DBGrid1: TDBGrid;
     Edit1: TEdit;
     Edit2: TEdit;
+    dbgDzialki: TFZDBGrid;
     IniGeneralSettings: TIniPropStorage;
     Label1: TLabel;
     Label2: TLabel;
@@ -68,10 +68,13 @@ type
     procedure aSprzedarzExecute(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Edit1Enter(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mSprzedarzClick(Sender: TObject);
+    procedure SQLQuery1BeforeClose(DataSet: TDataSet);
     procedure ToolButton1Click(Sender: TObject);
   private
+    procedure ConnectToMySQL55;
     { private declarations }
   public
     { public declarations }
@@ -79,7 +82,9 @@ type
 
 var
   FGlowny: TFGlowny;
-  MySQLConn: TMySQL55Connection;
+{
+MySQLConn: TMySQL55Connection;
+}
 
 implementation
 
@@ -97,9 +102,20 @@ begin
   aSprzedarz.Execute;
 end;
 
+procedure TFGlowny.SQLQuery1BeforeClose(DataSet: TDataSet);
+begin
+  SQLTransaction1.CloseDataSets;
+  SQLTransaction1.EndTransaction;
+end;
 procedure TFGlowny.ToolButton1Click(Sender: TObject);
 begin
    SQLQuery1.ExecSQL;
+end;
+
+procedure TFGlowny.ConnectToMySQL55;
+begin
+  with DataModuleROD.MySQLCon do if Connected = FALSE then Connected:=True
+    else Connected:=False;
 end;
 
 procedure TFGlowny.FormCreate(Sender: TObject);
@@ -107,7 +123,10 @@ begin
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
-
+  SQLTransaction1.EndTransaction;
+  SQLTransaction1.Active:=FALSE;
+  SQLTransaction1.EndTransaction;
+  ConnectToMySQL55;
 end;
 
 procedure TFGlowny.aSprzedarzExecute(Sender: TObject);
@@ -117,12 +136,29 @@ end;
 
 procedure TFGlowny.Button1Click(Sender: TObject);
 begin
-  with DataModuleROD.MySQLCon do if Connected = FALSE then Connected:=True else Connected:=False;
+  ConnectToMySQL55;
+  if DataModuleROD.MySQLCon.Connected then begin
+    SQLQuery1.ExecSQL;
+    SQLQuery1.Active:=TRUE;
+    Datasource1.Enabled:=TRUE;
+    dbgDzialki.Enabled:=TRUE;
+    dbgDzialki.Refresh;
+  end else begin
+    SQLTransaction1.EndTransaction;
+    SQLTransaction1.Active:=FALSE;
+    SQLQuery1.Active:=FALSE;
+    Datasource1.Enabled:=FALSE;
+  end;
 end;
 
 procedure TFGlowny.Edit1Enter(Sender: TObject);
 begin
   if Edit1.Text = 'Podaj numer' then Edit1.Text := '';
+end;
+
+procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+
 end;
 
 

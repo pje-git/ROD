@@ -50,6 +50,26 @@ msgstr ""
 msgid "ROD - Zarządzanie"
 msgstr ""
 
+#: tfglowny.dbgdzialki.columns[0].title.caption
+msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[0].TITLE.CAPTION"
+msgid "Numer"
+msgstr ""
+
+#: tfglowny.dbgdzialki.columns[1].title.caption
+msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[1].TITLE.CAPTION"
+msgid "Imię"
+msgstr ""
+
+#: tfglowny.dbgdzialki.columns[2].title.caption
+msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[2].TITLE.CAPTION"
+msgid "Nazwisko"
+msgstr ""
+
+#: tfglowny.dbgdzialki.columns[3].title.caption
+msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[3].TITLE.CAPTION"
+msgid "Obszar"
+msgstr ""
+
 #: tfglowny.edit1.hint
 msgid "Podaj numer działki lub nazwisko właściciela"
 msgstr ""
@@ -143,3 +163,4 @@ msgstr ""
 #: tfglowny.toolbutton5.caption
 msgid "ToolButton5"
 msgstr ""
+

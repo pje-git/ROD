@@ -16,7 +16,6 @@ type
 
     EventLog1: TEventLog;
     MySQLCon: TMySQL55Connection;
-    procedure DataModuleCreate(Sender: TObject);
     procedure MySQLConAfterConnect(Sender: TObject);
     procedure MySQLConAfterDisconnect(Sender: TObject);
     procedure MySQLConBeforeConnect(Sender: TObject);
@@ -49,30 +48,25 @@ begin
   lStatusMsg.Caption:=Msg;
 end;
 
+
 procedure TDataModuleROD.MySQLConBeforeConnect(Sender: TObject);
 begin
-  lStatusMsg.Caption := 'Nawiązuję połączenie ... proszę czekać ...';
-  rStatusShape.Brush.Color := clYellow;
+  if (lStatusMsg<>nil) then lStatusMsg.Caption := 'Nawiązuję połączenie ... proszę czekać ...';
+  if (rStatusShape<>nil) then rStatusShape.Brush.Color := clYellow;
 end;
 
 procedure TDataModuleROD.MySQLConAfterConnect(Sender: TObject);
 begin
-  lStatusMsg.Caption := 'Połączono z bazą '+MySQLCon.DatabaseName+'.';
-  rStatusShape.Brush.Color := clLime;
-  bConnect.Caption:='Rozłącz';
-
-end;
-
-procedure TDataModuleROD.DataModuleCreate(Sender: TObject);
-begin
-
+  if (lStatusMsg<>nil) then lStatusMsg.Caption := 'Połączono z bazą '+MySQLCon.DatabaseName+'.';
+  if (rStatusShape<>nil) then rStatusShape.Brush.Color := clLime;
+  if (bConnect<>nil) then bConnect.Caption:='Rozłącz';
 end;
 
 procedure TDataModuleROD.MySQLConAfterDisconnect(Sender: TObject);
 begin
-    bConnect.Caption:='Połącz';
-    lStatusMsg.Caption := 'Rozłączono bazę '+MySQLCon.DatabaseName+'.';
-    rStatusShape.Brush.Color := clRed;
+  if (bConnect<>nil) then bConnect.Caption:='Połącz';
+  if (lStatusMsg<>nil) then lStatusMsg.Caption := 'Rozłączono bazę '+MySQLCon.DatabaseName+'.';
+  if (rStatusShape<>nil) then rStatusShape.Brush.Color := clRed;
 end;
 
 end.

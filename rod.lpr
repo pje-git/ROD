@@ -18,7 +18,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TDataModuleROD, DataModuleROD);
   Application.CreateForm(TFGlowny, FGlowny);
-
   Application.Run;
 end.
 
