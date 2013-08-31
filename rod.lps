@@ -28,8 +28,13 @@
         <WindowIndex Value="0"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <TopLine Value="114"/>
         <CursorPos X="63" Y="142"/>
+=======
+        <TopLine Value="79"/>
+        <CursorPos X="16" Y="88"/>
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 =======
         <TopLine Value="79"/>
         <CursorPos X="16" Y="88"/>
@@ -105,6 +110,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <JumpHistory Count="28" HistoryIndex="27">
@@ -304,10 +310,96 @@
       </Position20>
       <Position21>
         <Filename Value="uglowny.pas"/>
+=======
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="119" Column="51" TopLine="102"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="134" Column="11" TopLine="120"/>
+      </Position2>
+      <Position3>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="77" Column="29" TopLine="71"/>
+      </Position3>
+      <Position4>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="113" Column="33" TopLine="90"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="77" Column="22" TopLine="64"/>
+      </Position5>
+      <Position6>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="135" Column="11" TopLine="114"/>
+      </Position6>
+      <Position7>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="143" Column="34" TopLine="104"/>
+      </Position7>
+      <Position8>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="17" Column="15" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="138" Column="101" TopLine="126"/>
+      </Position9>
+      <Position10>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="135" Column="28" TopLine="113"/>
+      </Position10>
+      <Position11>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="134" Column="27" TopLine="122"/>
+      </Position11>
+      <Position12>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="16" Column="1" TopLine="1"/>
+      </Position12>
+      <Position13>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="17" Column="1" TopLine="1"/>
+      </Position13>
+      <Position14>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="18" Column="1" TopLine="1"/>
+      </Position14>
+      <Position15>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="19" Column="1" TopLine="1"/>
+      </Position15>
+      <Position16>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="148" Column="47" TopLine="125"/>
+      </Position16>
+      <Position17>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="22" Column="15" TopLine="21"/>
+      </Position17>
+      <Position18>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="106" Column="9" TopLine="82"/>
+      </Position18>
+      <Position19>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="107" Column="9" TopLine="83"/>
+      </Position19>
+      <Position20>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="144" Column="11" TopLine="120"/>
+      </Position20>
+      <Position21>
+        <Filename Value="uglowny.pas"/>
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
         <Caret Line="145" Column="11" TopLine="121"/>
       </Position21>
       <Position22>
         <Filename Value="uglowny.pas"/>
+<<<<<<< HEAD
 =======
     <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
@@ -397,6 +489,8 @@
       <Position22>
         <Filename Value="uglowny.pas"/>
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
+=======
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
         <Caret Line="106" Column="9" TopLine="92"/>
       </Position22>
       <Position23>
@@ -428,6 +522,9 @@
         <Caret Line="145" Column="11" TopLine="121"/>
       </Position29>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
+=======
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 =======
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota

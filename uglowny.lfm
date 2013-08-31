@@ -39,7 +39,10 @@ object FGlowny: TFGlowny
   end
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 =======
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
   object Edit2: TEdit

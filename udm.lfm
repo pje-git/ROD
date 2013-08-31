@@ -4,12 +4,17 @@ object DataModuleROD: TDataModuleROD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   HorizontalOffset = 1168
   VerticalOffset = 681
 =======
   HorizontalOffset = 770
   VerticalOffset = 542
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+  HorizontalOffset = 1177
+  VerticalOffset = 451
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 =======
   HorizontalOffset = 1177
   VerticalOffset = 451

@@ -39,6 +39,7 @@
     </RunParams>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <RequiredPackages Count="11">
       <Item1>
         <PackageName Value="SDFLaz"/>
@@ -140,6 +141,40 @@
       </Item10>
       <Item11>
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
+=======
+    <RequiredPackages Count="13">
+      <Item1>
+        <PackageName Value="pl_fzcontrols"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="pl_jujiboutils"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="SDFLaz"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="MemDSLaz"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="SynEdit"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="RunTimeTypeInfoControls"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="SQLDBLaz"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="TurboPowerIPro"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="LazControls"/>
+      </Item10>
+      <Item11>
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
         <PackageName Value="DBFLaz"/>
       </Item11>
       <Item12>
@@ -149,6 +184,9 @@
         <PackageName Value="LCL"/>
       </Item13>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
+=======
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 =======
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
