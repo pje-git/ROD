@@ -4,15 +4,26 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
+<<<<<<< HEAD
     <Units Count="6">
+=======
+    <Units Count="7">
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
       <Unit0>
         <Filename Value="rod.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="rod"/>
+<<<<<<< HEAD
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="21"/>
+=======
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="19" Y="19"/>
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
         <UsageCount Value="238"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -23,11 +34,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UGlowny"/>
+<<<<<<< HEAD
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="106"/>
         <CursorPos X="3" Y="122"/>
+=======
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="92"/>
+        <CursorPos X="57" Y="73"/>
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
         <UsageCount Value="238"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -39,10 +57,17 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UEnergia"/>
+<<<<<<< HEAD
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="61" Y="11"/>
+=======
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="23" Y="15"/>
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
         <UsageCount Value="218"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -54,10 +79,18 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UDM"/>
+<<<<<<< HEAD
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos X="43" Y="21"/>
+=======
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="35" Y="46"/>
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
         <UsageCount Value="218"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -66,6 +99,7 @@
         <Filename Value="pjglobal.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="PJGlobal"/>
+<<<<<<< HEAD
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="11" Y="11"/>
@@ -80,10 +114,34 @@
         <CursorPos X="1" Y="13"/>
         <UsageCount Value="247"/>
       </Unit5>
+=======
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3"/>
+        <CursorPos X="26" Y="25"/>
+        <UsageCount Value="300"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpash.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="177"/>
+        <CursorPos X="23" Y="192"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\inc\objpas.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="259"/>
+        <CursorPos X="9" Y="259"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
+<<<<<<< HEAD
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uglowny.pas"/>
@@ -207,4 +265,58 @@
       </Position30>
     </JumpHistory>
   </ProjectSession>
+=======
+    <JumpHistory Count="12" HistoryIndex="11">
+      <Position1>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="16" Column="1" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="17" Column="1" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="18" Column="1" TopLine="1"/>
+      </Position3>
+      <Position4>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="19" Column="1" TopLine="1"/>
+      </Position4>
+      <Position5>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="32" Column="10" TopLine="26"/>
+      </Position5>
+      <Position6>
+        <Filename Value="rod.lpr"/>
+        <Caret Line="20" Column="1" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="110" Column="3" TopLine="95"/>
+      </Position7>
+      <Position8>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="98" Column="27" TopLine="78"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="92" Column="100" TopLine="78"/>
+      </Position9>
+      <Position10>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="91" Column="100" TopLine="77"/>
+      </Position10>
+      <Position11>
+        <Filename Value="uglowny.pas"/>
+        <Caret Line="130" Column="1" TopLine="94"/>
+      </Position11>
+      <Position12>
+        <Filename Value="pjglobal.pas"/>
+        <Caret Line="18" Column="21" TopLine="3"/>
+      </Position12>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 </CONFIG>

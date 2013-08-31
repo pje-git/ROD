@@ -7,7 +7,12 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
+<<<<<<< HEAD
   IniPropStorage, DbCtrls, BarChart, DividerBevel, udm, PJGlobal, Classes;
+=======
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, udm,
+  PJGlobal, Classes;
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 
 type
 
@@ -24,11 +29,22 @@ type
     aEnergia: TAction;
     alGlowny: TActionList;
     Button1: TButton;
+<<<<<<< HEAD
     Datasource1: TDatasource;
     Edit1: TEdit;
     dbgDzialki: TDBGrid;
     IniGeneralSettings: TIniPropStorage;
     Label1: TLabel;
+=======
+    CalcEdit1: TCalcEdit;
+    Datasource1: TDatasource;
+    DBGrid1: TDBGrid;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    IniGeneralSettings: TIniPropStorage;
+    Label1: TLabel;
+    Label2: TLabel;
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     lStatus: TLabel;
     mSets: TMenuItem;
     mAdmin: TMenuItem;
@@ -53,6 +69,10 @@ type
     pStatus: TPanel;
     rStatus: TShape;
     SQLQuery1: TSQLQuery;
+<<<<<<< HEAD
+=======
+    SQLTransaction1: TSQLTransaction;
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     StatusBar1: TStatusBar;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
@@ -63,6 +83,7 @@ type
     procedure aSprzedarzExecute(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Edit1Enter(Sender: TObject);
+<<<<<<< HEAD
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mSprzedarzClick(Sender: TObject);
@@ -70,6 +91,12 @@ type
     procedure ToolButton1Click(Sender: TObject);
   private
     procedure ConnectToMySQL55;
+=======
+    procedure FormCreate(Sender: TObject);
+    procedure mSprzedarzClick(Sender: TObject);
+    procedure ToolButton1Click(Sender: TObject);
+  private
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     { private declarations }
   public
     { public declarations }
@@ -77,9 +104,13 @@ type
 
 var
   FGlowny: TFGlowny;
+<<<<<<< HEAD
 {
 MySQLConn: TMySQL55Connection;
 }
+=======
+  MySQLConn: TMySQL55Connection;
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 
 implementation
 
@@ -97,16 +128,20 @@ begin
   aSprzedarz.Execute;
 end;
 
+<<<<<<< HEAD
 procedure TFGlowny.SQLQuery1BeforeClose(DataSet: TDataSet);
 begin
 //  SQLTransaction1.CloseDataSets;
 //  SQLTransaction1.EndTransaction;
 end;
+=======
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 procedure TFGlowny.ToolButton1Click(Sender: TObject);
 begin
    SQLQuery1.ExecSQL;
 end;
 
+<<<<<<< HEAD
 procedure TFGlowny.ConnectToMySQL55;
 begin
   with DataModuleROD.MySQLCon do if Connected = FALSE then begin
@@ -126,15 +161,21 @@ begin
   end;
 end;
 
+=======
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 procedure TFGlowny.FormCreate(Sender: TObject);
 begin
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
+<<<<<<< HEAD
 //  SQLTransaction1.EndTransaction;
 //  SQLTransaction1.Active:=FALSE;
 //  SQLTransaction1.EndTransaction;
   ConnectToMySQL55;
+=======
+
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 end;
 
 procedure TFGlowny.aSprzedarzExecute(Sender: TObject);
@@ -144,7 +185,11 @@ end;
 
 procedure TFGlowny.Button1Click(Sender: TObject);
 begin
+<<<<<<< HEAD
   ConnectToMySQL55;
+=======
+  with DataModuleROD.MySQLCon do if Connected = FALSE then Connected:=True else Connected:=False;
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 end;
 
 procedure TFGlowny.Edit1Enter(Sender: TObject);
@@ -152,6 +197,7 @@ begin
   if Edit1.Text = 'Podaj numer' then Edit1.Text := '';
 end;
 
+<<<<<<< HEAD
 procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   SQLTransaction1.EndTransaction;
@@ -161,6 +207,8 @@ begin
   SQLQuery1.Active:=FALSE;
 end;
 
+=======
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 
 end.
 

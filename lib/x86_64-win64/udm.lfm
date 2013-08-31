@@ -1,17 +1,29 @@
 object DataModuleROD: TDataModuleROD
   OldCreateOrder = False
   Height = 166
+<<<<<<< HEAD
   HorizontalOffset = 1168
   VerticalOffset = 681
   Width = 246
   object MySQLCon: TMySQL55Connection
     Connected = False
+=======
+  HorizontalOffset = 1177
+  VerticalOffset = 451
+  Width = 246
+  object MySQLCon: TMySQL55Connection
+    Connected = True
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     LoginPrompt = True
     AfterConnect = MySQLConAfterConnect
     AfterDisconnect = MySQLConAfterDisconnect
     DatabaseName = 'rod'
     KeepConnection = False
     Password = 'pawel123'
+<<<<<<< HEAD
+=======
+    Transaction = FGlowny.SQLTransaction1
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     UserName = 'pawel'
     HostName = 'localhost'
     OnLog = MySQLConLog

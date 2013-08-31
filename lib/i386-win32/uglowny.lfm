@@ -1,14 +1,10 @@
 object FGlowny: TFGlowny
-  Left = 349
-  Height = 418
-  Top = 224
+  Left = 225
+  Height = 423
+  Top = 166
   Width = 667
-<<<<<<< HEAD
-=======
-  ActiveControl = Edit2
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
   Caption = 'ROD - Zarządzanie'
-  ClientHeight = 398
+  ClientHeight = 404
   ClientWidth = 667
   Menu = mGlowne
   OnClose = FormClose
@@ -31,7 +27,7 @@ object FGlowny: TFGlowny
   end
   object Edit1: TEdit
     Left = 88
-    Height = 23
+    Height = 21
     Hint = 'Podaj numer działki lub nazwisko właściciela'
     Top = 4
     Width = 80
@@ -39,16 +35,6 @@ object FGlowny: TFGlowny
     OnEnter = Edit1Enter
     TabOrder = 0
     Text = 'Podaj numer'
-  end
-<<<<<<< HEAD
-=======
-  object Edit2: TEdit
-    Left = 88
-    Height = 23
-    Top = 32
-    Width = 80
-    TabOrder = 1
-    Text = 'Edit2'
   end
   object Label2: TLabel
     Left = 16
@@ -65,7 +51,6 @@ object FGlowny: TFGlowny
     ParentColor = False
     ParentFont = False
   end
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
   object pStatus: TPanel
     Left = 8
     Height = 26
@@ -73,11 +58,7 @@ object FGlowny: TFGlowny
     Width = 552
     ClientHeight = 26
     ClientWidth = 552
-<<<<<<< HEAD
     TabOrder = 1
-=======
-    TabOrder = 2
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     object rStatus: TShape
       Left = 8
       Height = 16
@@ -90,9 +71,9 @@ object FGlowny: TFGlowny
     end
     object lStatus: TLabel
       Left = 40
-      Height = 15
+      Height = 13
       Top = 4
-      Width = 153
+      Width = 139
       Caption = 'Nie połączono z bazą danych'
       ParentColor = False
     end
@@ -104,16 +85,12 @@ object FGlowny: TFGlowny
     Width = 75
     Caption = 'Połącz'
     OnClick = Button1Click
-<<<<<<< HEAD
     TabOrder = 2
-=======
-    TabOrder = 3
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 23
-    Top = 375
+    Height = 20
+    Top = 384
     Width = 667
     Panels = <>
   end
@@ -123,11 +100,7 @@ object FGlowny: TFGlowny
     Top = 0
     Width = 667
     Caption = 'ToolBar1'
-<<<<<<< HEAD
     TabOrder = 4
-=======
-    TabOrder = 5
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     object ToolButton1: TToolButton
       Left = 1
       Top = 2
@@ -158,30 +131,10 @@ object FGlowny: TFGlowny
       Style = tbsSeparator
     end
   end
-<<<<<<< HEAD
-  object dbgDzialki: TFZDBGrid
-    Left = 8
-    Height = 180
-    Top = 128
-=======
-  object CalcEdit1: TCalcEdit
-    Left = 184
-    Height = 23
-    Top = 32
-    Width = 80
-    CalculatorLayout = clNormal
-    AsFloat = 0
-    AsInteger = 0
-    ButtonWidth = 23
-    NumGlyphs = 1
-    MaxLength = 0
-    TabOrder = 6
-  end
   object dbgDzialki: TFZDBGrid
     Left = 8
     Height = 236
     Top = 72
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     Width = 656
     AutoEdit = False
     Color = clWindow
@@ -211,23 +164,17 @@ object FGlowny: TFGlowny
       end>
     DataSource = Datasource1
     Flat = True
-    Font.CharSet = 4
-    Font.Color = 16384
-    Font.Name = '@Arial Unicode MS'
+    Font.Name = 'Gill Sans MT Condensed'
     ParentFont = False
-<<<<<<< HEAD
     TabOrder = 5
     TitleFont.CharSet = ANSI_CHARSET
     TitleFont.Color = 16384
-=======
-    TabOrder = 7
-    TitleFont.CharSet = ANSI_CHARSET
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     TitleFont.Height = -13
     TitleFont.Name = '@Arial Unicode MS'
     TitleFont.Pitch = fpVariable
     TitleFont.Quality = fqDraft
     TitleFont.Style = [fsBold]
+    UseXORFeatures = True
   end
   object mGlowne: TMainMenu
     left = 531
@@ -350,18 +297,11 @@ object FGlowny: TFGlowny
       end>
     IniFileName = 'rod.ini'
     IniSection = 'GENERAL_SETTINGS'
-<<<<<<< HEAD
-    left = 448
-    top = 8
-  end
-  object SQLQuery1: TSQLQuery
-=======
     left = 464
     top = 8
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     FieldDefs = <    
       item
         Name = 'id_dzialka'
@@ -373,7 +313,7 @@ object FGlowny: TFGlowny
         Name = 'numer'
         DataType = ftString
         Precision = -1
-        Size = 8
+        Size = 24
       end    
       item
         Name = 'metraz'
@@ -385,16 +325,18 @@ object FGlowny: TFGlowny
         Name = 'imie'
         DataType = ftString
         Precision = -1
-        Size = 32
+        Size = 96
       end    
       item
         Name = 'nazwisko'
         DataType = ftString
         Precision = -1
-        Size = 64
+        Size = 192
       end>
+    Active = True
     BeforeClose = SQLQuery1BeforeClose
     Database = DataModuleROD.MySQLCon
+    Transaction = SQLTransaction1
     SQL.Strings = (
       'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
       'where da.id_dzialka=dc.id_dzialka'
@@ -408,14 +350,11 @@ object FGlowny: TFGlowny
     left = 616
     top = 72
   end
-<<<<<<< HEAD
-=======
   object SQLTransaction1: TSQLTransaction
     Active = True
     Action = caNone
     Database = DataModuleROD.MySQLCon
     left = 616
-    top = 120
+    top = 136
   end
->>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
 end

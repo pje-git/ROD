@@ -7,8 +7,13 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
+<<<<<<< HEAD
   Forms, UGlowny, tachartlazaruspkg, lazcontrols, dbflaz,
   runtimetypeinfocontrols, memdslaz, sdflaz, udm, PJGlobal
+=======
+  Forms, zcomponent, UGlowny, tachartlazaruspkg, lazcontrols, dbflaz,
+  runtimetypeinfocontrols, udm, PJGlobal
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
   { you can add units after this };
 
 {$R *.res}
@@ -18,6 +23,10 @@ begin
   Application.Initialize;
   Application.CreateForm(TDataModuleROD, DataModuleROD);
   Application.CreateForm(TFGlowny, FGlowny);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
   Application.Run;
 end.
 

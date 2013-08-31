@@ -12,6 +12,7 @@
       <Icon Value="0"/>
     </General>
     <i18n>
+<<<<<<< HEAD
       <EnableI18N Value="True"/>
       <OutDir Value="languages\pl"/>
     </i18n>
@@ -23,6 +24,12 @@
       <BuildNr Value="1"/>
       <Language Value="0415"/>
       <StringTable Comments="Projekt do zarządzania ROD w Trzy Korony w Pabianicach" CompanyName="PJE" FileDescription="Projekt dla ROD Trzy Korony w Pabianicach" InternalName="ROD" LegalCopyright="PJE" LegalTrademarks="PJE" OriginalFilename="PJE ROD" ProductName="ROD Kompleksowy System Zarządzania" ProductVersion="1.0"/>
+=======
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
@@ -72,7 +79,11 @@
         <PackageName Value="LCL"/>
       </Item11>
     </RequiredPackages>
+<<<<<<< HEAD
     <Units Count="6">
+=======
+    <Units Count="5">
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
       <Unit0>
         <Filename Value="rod.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -107,11 +118,14 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="PJGlobal"/>
       </Unit4>
+<<<<<<< HEAD
       <Unit5>
         <Filename Value="ustringspl.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uStringsPL"/>
       </Unit5>
+=======
+>>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     </Units>
   </ProjectOptions>
   <CompilerOptions>
