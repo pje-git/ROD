@@ -2,6 +2,11 @@ TFGLOWNY.CAPTION=ROD - Zarządzanie
 TFGLOWNY.LABEL1.CAPTION=&Działka :
 TFGLOWNY.EDIT1.HINT=Podaj numer działki lub nazwisko właściciela
 TFGLOWNY.EDIT1.TEXT=Podaj numer
+<<<<<<< HEAD
+=======
+TFGLOWNY.EDIT2.TEXT=Edit2
+TFGLOWNY.LABEL2.CAPTION=&Działka :
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 TFGLOWNY.LSTATUS.CAPTION=Nie połączono z bazą danych
 TFGLOWNY.BUTTON1.CAPTION=Połącz
 TFGLOWNY.TOOLBAR1.CAPTION=ToolBar1

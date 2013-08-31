@@ -7,7 +7,12 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
+<<<<<<< HEAD
   IniPropStorage, DbCtrls, BarChart, DividerBevel, udm, PJGlobal, Classes;
+=======
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
+  JDBGridControl, udm, PJGlobal, Classes;
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 
 type
 
@@ -24,9 +29,15 @@ type
     aEnergia: TAction;
     alGlowny: TActionList;
     Button1: TButton;
+    CalcEdit1: TCalcEdit;
     Datasource1: TDatasource;
     Edit1: TEdit;
+<<<<<<< HEAD
     dbgDzialki: TDBGrid;
+=======
+    Edit2: TEdit;
+    dbgDzialki: TFZDBGrid;
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
     IniGeneralSettings: TIniPropStorage;
     Label1: TLabel;
     lStatus: TLabel;
@@ -131,9 +142,15 @@ begin
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
+<<<<<<< HEAD
 //  SQLTransaction1.EndTransaction;
 //  SQLTransaction1.Active:=FALSE;
 //  SQLTransaction1.EndTransaction;
+=======
+  SQLTransaction1.EndTransaction;
+  SQLTransaction1.Active:=FALSE;
+  SQLTransaction1.EndTransaction;
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
   ConnectToMySQL55;
 end;
 

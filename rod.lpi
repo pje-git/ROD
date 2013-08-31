@@ -37,6 +37,7 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
+<<<<<<< HEAD
     <RequiredPackages Count="11">
       <Item1>
         <PackageName Value="SDFLaz"/>
@@ -71,6 +72,48 @@
       <Item11>
         <PackageName Value="LCL"/>
       </Item11>
+=======
+    <RequiredPackages Count="13">
+      <Item1>
+        <PackageName Value="pl_fzcontrols"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="pl_jujiboutils"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="SDFLaz"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="MemDSLaz"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="SynEdit"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="RunTimeTypeInfoControls"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="SQLDBLaz"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="TurboPowerIPro"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="LazControls"/>
+      </Item10>
+      <Item11>
+        <PackageName Value="DBFLaz"/>
+      </Item11>
+      <Item12>
+        <PackageName Value="FCL"/>
+      </Item12>
+      <Item13>
+        <PackageName Value="LCL"/>
+      </Item13>
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
     </RequiredPackages>
     <Units Count="6">
       <Unit0>

@@ -78,6 +78,10 @@ msgstr ""
 msgid "Podaj numer"
 msgstr ""
 
+#: tfglowny.edit2.text
+msgid "Edit2"
+msgstr ""
+
 #: tfglowny.label1.caption
 msgctxt "tfglowny.label1.caption"
 msgid "&Działka :"
