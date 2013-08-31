@@ -80,6 +80,14 @@ msgstr ""
 
 #: tfglowny.edit2.text
 msgid "Edit2"
+<<<<<<< HEAD
+=======
+msgstr ""
+
+#: tfglowny.label1.caption
+msgctxt "tfglowny.label1.caption"
+msgid "&Działka :"
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 msgstr ""
 
 #: tfglowny.label1.caption

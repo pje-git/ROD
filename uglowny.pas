@@ -8,7 +8,12 @@ uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
 <<<<<<< HEAD
+<<<<<<< HEAD
   IniPropStorage, DbCtrls, BarChart, DividerBevel, udm, PJGlobal, Classes;
+=======
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
+  JDBGridControl, udm, PJGlobal, Classes;
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 =======
   IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
   JDBGridControl, udm, PJGlobal, Classes;
@@ -33,8 +38,11 @@ type
     Datasource1: TDatasource;
     Edit1: TEdit;
 <<<<<<< HEAD
+<<<<<<< HEAD
     dbgDzialki: TDBGrid;
 =======
+=======
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
     Edit2: TEdit;
     dbgDzialki: TFZDBGrid;
 >>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
@@ -143,9 +151,15 @@ begin
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 //  SQLTransaction1.EndTransaction;
 //  SQLTransaction1.Active:=FALSE;
 //  SQLTransaction1.EndTransaction;
+=======
+  SQLTransaction1.EndTransaction;
+  SQLTransaction1.Active:=FALSE;
+  SQLTransaction1.EndTransaction;
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
 =======
   SQLTransaction1.EndTransaction;
   SQLTransaction1.Active:=FALSE;

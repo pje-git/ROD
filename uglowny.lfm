@@ -38,7 +38,10 @@ object FGlowny: TFGlowny
     Text = 'Podaj numer'
   end
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
   object Edit2: TEdit
     Left = 88
     Height = 23
