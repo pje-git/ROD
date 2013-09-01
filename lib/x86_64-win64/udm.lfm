@@ -2,6 +2,7 @@ object DataModuleROD: TDataModuleROD
   OldCreateOrder = False
   Height = 166
 <<<<<<< HEAD
+<<<<<<< HEAD
   HorizontalOffset = 1168
   VerticalOffset = 681
   Width = 246
@@ -14,6 +15,13 @@ object DataModuleROD: TDataModuleROD
   object MySQLCon: TMySQL55Connection
     Connected = True
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+  HorizontalOffset = 770
+  VerticalOffset = 542
+  Width = 246
+  object MySQLCon: TMySQL55Connection
+    Connected = True
+>>>>>>> dzialka
     LoginPrompt = True
     AfterConnect = MySQLConAfterConnect
     AfterDisconnect = MySQLConAfterDisconnect
@@ -21,10 +29,16 @@ object DataModuleROD: TDataModuleROD
     KeepConnection = False
     Password = 'pawel123'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     Transaction = FGlowny.SQLTransaction1
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
     UserName = 'pawel'
+=======
+    Transaction = FGlowny.SQLTransaction1
+    UserName = 'pawel'
+    CharSet = 'UTF8'
+>>>>>>> dzialka
     HostName = 'localhost'
     OnLog = MySQLConLog
     LogEvents = []

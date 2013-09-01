@@ -1,4 +1,5 @@
 object FGlowny: TFGlowny
+<<<<<<< HEAD
   Left = 349
   Height = 418
   Top = 224
@@ -9,6 +10,14 @@ object FGlowny: TFGlowny
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
   Caption = 'ROD - Zarządzanie'
   ClientHeight = 398
+=======
+  Left = 225
+  Height = 423
+  Top = 166
+  Width = 667
+  Caption = 'ROD - Zarządzanie'
+  ClientHeight = 404
+>>>>>>> dzialka
   ClientWidth = 667
   Menu = mGlowne
   OnClose = FormClose
@@ -31,7 +40,11 @@ object FGlowny: TFGlowny
   end
   object Edit1: TEdit
     Left = 88
+<<<<<<< HEAD
     Height = 23
+=======
+    Height = 21
+>>>>>>> dzialka
     Hint = 'Podaj numer działki lub nazwisko właściciela'
     Top = 4
     Width = 80
@@ -40,6 +53,7 @@ object FGlowny: TFGlowny
     TabOrder = 0
     Text = 'Podaj numer'
   end
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   object Edit2: TEdit
@@ -50,6 +64,8 @@ object FGlowny: TFGlowny
     TabOrder = 1
     Text = 'Edit2'
   end
+=======
+>>>>>>> dzialka
   object Label2: TLabel
     Left = 16
     Height = 18
@@ -65,7 +81,10 @@ object FGlowny: TFGlowny
     ParentColor = False
     ParentFont = False
   end
+<<<<<<< HEAD
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+>>>>>>> dzialka
   object pStatus: TPanel
     Left = 8
     Height = 26
@@ -74,10 +93,14 @@ object FGlowny: TFGlowny
     ClientHeight = 26
     ClientWidth = 552
 <<<<<<< HEAD
+<<<<<<< HEAD
     TabOrder = 1
 =======
     TabOrder = 2
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+    TabOrder = 1
+>>>>>>> dzialka
     object rStatus: TShape
       Left = 8
       Height = 16
@@ -90,9 +113,15 @@ object FGlowny: TFGlowny
     end
     object lStatus: TLabel
       Left = 40
+<<<<<<< HEAD
       Height = 15
       Top = 4
       Width = 153
+=======
+      Height = 13
+      Top = 4
+      Width = 139
+>>>>>>> dzialka
       Caption = 'Nie połączono z bazą danych'
       ParentColor = False
     end
@@ -105,6 +134,7 @@ object FGlowny: TFGlowny
     Caption = 'Połącz'
     OnClick = Button1Click
 <<<<<<< HEAD
+<<<<<<< HEAD
     TabOrder = 2
 =======
     TabOrder = 3
@@ -114,6 +144,14 @@ object FGlowny: TFGlowny
     Left = 0
     Height = 23
     Top = 375
+=======
+    TabOrder = 2
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 20
+    Top = 384
+>>>>>>> dzialka
     Width = 667
     Panels = <>
   end
@@ -124,10 +162,14 @@ object FGlowny: TFGlowny
     Width = 667
     Caption = 'ToolBar1'
 <<<<<<< HEAD
+<<<<<<< HEAD
     TabOrder = 4
 =======
     TabOrder = 5
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+    TabOrder = 4
+>>>>>>> dzialka
     object ToolButton1: TToolButton
       Left = 1
       Top = 2
@@ -159,6 +201,7 @@ object FGlowny: TFGlowny
     end
   end
 <<<<<<< HEAD
+<<<<<<< HEAD
   object dbgDzialki: TFZDBGrid
     Left = 8
     Height = 180
@@ -177,11 +220,16 @@ object FGlowny: TFGlowny
     MaxLength = 0
     TabOrder = 6
   end
+=======
+>>>>>>> dzialka
   object dbgDzialki: TFZDBGrid
     Left = 8
     Height = 236
     Top = 72
+<<<<<<< HEAD
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+>>>>>>> dzialka
     Width = 656
     AutoEdit = False
     Color = clWindow
@@ -211,6 +259,7 @@ object FGlowny: TFGlowny
       end>
     DataSource = Datasource1
     Flat = True
+<<<<<<< HEAD
     Font.CharSet = 4
     Font.Color = 16384
     Font.Name = '@Arial Unicode MS'
@@ -223,11 +272,22 @@ object FGlowny: TFGlowny
     TabOrder = 7
     TitleFont.CharSet = ANSI_CHARSET
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+    Font.Name = 'Gill Sans MT Condensed'
+    ParentFont = False
+    TabOrder = 5
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = 16384
+>>>>>>> dzialka
     TitleFont.Height = -13
     TitleFont.Name = '@Arial Unicode MS'
     TitleFont.Pitch = fpVariable
     TitleFont.Quality = fqDraft
     TitleFont.Style = [fsBold]
+<<<<<<< HEAD
+=======
+    UseXORFeatures = True
+>>>>>>> dzialka
   end
   object mGlowne: TMainMenu
     left = 531
@@ -351,17 +411,23 @@ object FGlowny: TFGlowny
     IniFileName = 'rod.ini'
     IniSection = 'GENERAL_SETTINGS'
 <<<<<<< HEAD
+<<<<<<< HEAD
     left = 448
     top = 8
   end
   object SQLQuery1: TSQLQuery
 =======
+=======
+>>>>>>> dzialka
     left = 464
     top = 8
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
+<<<<<<< HEAD
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+>>>>>>> dzialka
     FieldDefs = <    
       item
         Name = 'id_dzialka'
@@ -373,7 +439,11 @@ object FGlowny: TFGlowny
         Name = 'numer'
         DataType = ftString
         Precision = -1
+<<<<<<< HEAD
         Size = 8
+=======
+        Size = 24
+>>>>>>> dzialka
       end    
       item
         Name = 'metraz'
@@ -385,16 +455,29 @@ object FGlowny: TFGlowny
         Name = 'imie'
         DataType = ftString
         Precision = -1
+<<<<<<< HEAD
         Size = 32
+=======
+        Size = 96
+>>>>>>> dzialka
       end    
       item
         Name = 'nazwisko'
         DataType = ftString
         Precision = -1
+<<<<<<< HEAD
         Size = 64
       end>
     BeforeClose = SQLQuery1BeforeClose
     Database = DataModuleROD.MySQLCon
+=======
+        Size = 192
+      end>
+    Active = True
+    BeforeClose = SQLQuery1BeforeClose
+    Database = DataModuleROD.MySQLCon
+    Transaction = SQLTransaction1
+>>>>>>> dzialka
     SQL.Strings = (
       'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
       'where da.id_dzialka=dc.id_dzialka'
@@ -409,13 +492,21 @@ object FGlowny: TFGlowny
     top = 72
   end
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dzialka
   object SQLTransaction1: TSQLTransaction
     Active = True
     Action = caNone
     Database = DataModuleROD.MySQLCon
     left = 616
+<<<<<<< HEAD
     top = 120
   end
 >>>>>>> 21a4d1561f459a3a933cca6b13b5d78159e4ea14
+=======
+    top = 136
+  end
+>>>>>>> dzialka
 end
