@@ -7,22 +7,8 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, udm, PJGlobal, Classes;
-=======
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
-  JDBGridControl, udm, PJGlobal, Classes;
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
-=======
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
-  JDBGridControl, udm, PJGlobal, Classes;
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
-=======
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker, FZDB,
-  JDBGridControl, udm, PJGlobal, Classes;
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
+  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker,
+  ubarcodes, cyColorMatrix, FZDB, JDBGridControl, udm, PJGlobal, Classes;
 
 type
 
@@ -39,23 +25,12 @@ type
     aEnergia: TAction;
     alGlowny: TActionList;
     Button1: TButton;
-    CalcEdit1: TCalcEdit;
     Datasource1: TDatasource;
     Edit1: TEdit;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    dbgDzialki: TDBGrid;
-=======
-=======
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
-=======
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
-    Edit2: TEdit;
     dbgDzialki: TFZDBGrid;
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
     IniGeneralSettings: TIniPropStorage;
     Label1: TLabel;
+    Label2: TLabel;
     lStatus: TLabel;
     mSets: TMenuItem;
     mAdmin: TMenuItem;
@@ -80,6 +55,7 @@ type
     pStatus: TPanel;
     rStatus: TShape;
     SQLQuery1: TSQLQuery;
+    SQLTransaction1: TSQLTransaction;
     StatusBar1: TStatusBar;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
@@ -126,8 +102,8 @@ end;
 
 procedure TFGlowny.SQLQuery1BeforeClose(DataSet: TDataSet);
 begin
-//  SQLTransaction1.CloseDataSets;
-//  SQLTransaction1.EndTransaction;
+  SQLTransaction1.CloseDataSets;
+  SQLTransaction1.EndTransaction;
 end;
 procedure TFGlowny.ToolButton1Click(Sender: TObject);
 begin
@@ -136,21 +112,8 @@ end;
 
 procedure TFGlowny.ConnectToMySQL55;
 begin
-  with DataModuleROD.MySQLCon do if Connected = FALSE then begin
-    Connected:=True;
-    SQLQuery1.ExecSQL;
-    SQLQuery1.Active:=TRUE;
-    Datasource1.Enabled:=TRUE;
-    dbgDzialki.Enabled:=TRUE;
-    dbgDzialki.Refresh;
-  end else begin
-//    SQLTransaction1.Commit;
-//    SQLTransaction1.EndTransaction;
-//    SQLTransaction1.Active:=FALSE;
-//    SQLQuery1.Active:=FALSE;
-    Datasource1.Enabled:=FALSE;
-    Connected:=False;
-  end;
+  with DataModuleROD.MySQLCon do if Connected = FALSE then Connected:=True
+    else Connected:=False;
 end;
 
 procedure TFGlowny.FormCreate(Sender: TObject);
@@ -158,28 +121,7 @@ begin
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-//  SQLTransaction1.EndTransaction;
-//  SQLTransaction1.Active:=FALSE;
-//  SQLTransaction1.EndTransaction;
-=======
-  SQLTransaction1.EndTransaction;
-  SQLTransaction1.Active:=FALSE;
-  SQLTransaction1.EndTransaction;
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
-=======
-  SQLTransaction1.EndTransaction;
-  SQLTransaction1.Active:=FALSE;
-  SQLTransaction1.EndTransaction;
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
-=======
-  SQLTransaction1.EndTransaction;
-  SQLTransaction1.Active:=FALSE;
-  SQLTransaction1.EndTransaction;
->>>>>>> parent of 04ff3e3... Wyczyszczone, skompiloweane - robota
-  ConnectToMySQL55;
+//  ConnectToMySQL55;
 end;
 
 procedure TFGlowny.aSprzedarzExecute(Sender: TObject);
@@ -190,6 +132,18 @@ end;
 procedure TFGlowny.Button1Click(Sender: TObject);
 begin
   ConnectToMySQL55;
+  if DataModuleROD.MySQLCon.Connected then begin
+    SQLQuery1.ExecSQL;
+    SQLQuery1.Active:=TRUE;
+    Datasource1.Enabled:=TRUE;
+    dbgDzialki.Enabled:=TRUE;
+    dbgDzialki.Refresh;
+  end else begin
+    SQLTransaction1.EndTransaction;
+    SQLTransaction1.Active:=FALSE;
+    SQLQuery1.Active:=FALSE;
+    Datasource1.Enabled:=FALSE;
+  end;
 end;
 
 procedure TFGlowny.Edit1Enter(Sender: TObject);
@@ -199,11 +153,7 @@ end;
 
 procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-//  SQLTransaction1.EndTransaction;
-//  SQLTransaction1.Commit;
-//  SQLTransaction1.Active:=FALSE;
-  Datasource1.Enabled:=FALSE;
-  SQLQuery1.Active:=FALSE;
+
 end;
 
 
