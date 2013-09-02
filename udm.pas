@@ -16,9 +16,11 @@ type
 
     EventLog1: TEventLog;
     MySQLCon: TMySQL55Connection;
+    SQLTransaction1: TSQLTransaction;
     procedure MySQLConAfterConnect(Sender: TObject);
     procedure MySQLConAfterDisconnect(Sender: TObject);
     procedure MySQLConBeforeConnect(Sender: TObject);
+    procedure MySQLConBeforeDisconnect(Sender: TObject);
     procedure MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
       const Msg: String);
   private
@@ -53,6 +55,11 @@ procedure TDataModuleROD.MySQLConBeforeConnect(Sender: TObject);
 begin
   if (lStatusMsg<>nil) then lStatusMsg.Caption := 'Nawiązuję połączenie ... proszę czekać ...';
   if (rStatusShape<>nil) then rStatusShape.Brush.Color := clYellow;
+end;
+
+procedure TDataModuleROD.MySQLConBeforeDisconnect(Sender: TObject);
+begin
+
 end;
 
 procedure TDataModuleROD.MySQLConAfterConnect(Sender: TObject);

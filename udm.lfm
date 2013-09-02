@@ -1,18 +1,19 @@
 object DataModuleROD: TDataModuleROD
   OldCreateOrder = False
   Height = 166
-  HorizontalOffset = 770
-  VerticalOffset = 542
+  HorizontalOffset = 1144
+  VerticalOffset = 574
   Width = 246
   object MySQLCon: TMySQL55Connection
     Connected = True
     LoginPrompt = True
     AfterConnect = MySQLConAfterConnect
     AfterDisconnect = MySQLConAfterDisconnect
+    BeforeDisconnect = MySQLConBeforeDisconnect
     DatabaseName = 'rod'
     KeepConnection = False
     Password = 'pawel123'
-    Transaction = FGlowny.SQLTransaction1
+    Transaction = SQLTransaction1
     UserName = 'pawel'
     CharSet = 'UTF8'
     HostName = 'localhost'
@@ -25,14 +26,21 @@ object DataModuleROD: TDataModuleROD
     AppendContent = False
     LogType = ltFile
     Active = False
-    RaiseExceptionOnError = False
+    RaiseExceptionOnError = True
     DefaultEventType = etCustom
-    FileName = 'd:\Projekty\Lazarus\ROD\log.txt'
+    FileName = 'typhon.log'
     TimeStampFormat = 'YYYY-MM-DD hh:nn:ss '
     CustomLogType = 0
     EventIDOffset = 0
     Paused = False
     left = 56
     top = 80
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Action = caCommit
+    Database = MySQLCon
+    left = 136
+    top = 16
   end
 end

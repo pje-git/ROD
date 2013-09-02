@@ -1,10 +1,10 @@
 object FGlowny: TFGlowny
-  Left = 225
+  Left = 310
   Height = 423
-  Top = 166
+  Top = 165
   Width = 667
   Caption = 'ROD - Zarządzanie'
-  ClientHeight = 404
+  ClientHeight = 403
   ClientWidth = 667
   Menu = mGlowne
   OnClose = FormClose
@@ -27,7 +27,7 @@ object FGlowny: TFGlowny
   end
   object Edit1: TEdit
     Left = 88
-    Height = 21
+    Height = 23
     Hint = 'Podaj numer działki lub nazwisko właściciela'
     Top = 4
     Width = 80
@@ -71,9 +71,9 @@ object FGlowny: TFGlowny
     end
     object lStatus: TLabel
       Left = 40
-      Height = 13
+      Height = 15
       Top = 4
-      Width = 139
+      Width = 153
       Caption = 'Nie połączono z bazą danych'
       ParentColor = False
     end
@@ -89,8 +89,8 @@ object FGlowny: TFGlowny
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 20
-    Top = 384
+    Height = 23
+    Top = 380
     Width = 667
     Panels = <>
   end
@@ -333,28 +333,20 @@ object FGlowny: TFGlowny
         Precision = -1
         Size = 192
       end>
-    Active = True
     BeforeClose = SQLQuery1BeforeClose
     Database = DataModuleROD.MySQLCon
-    Transaction = SQLTransaction1
+    Transaction = DataModuleROD.SQLTransaction1
     SQL.Strings = (
       'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
       'where da.id_dzialka=dc.id_dzialka'
     )
     Params = <>
-    left = 616
+    left = 600
     top = 8
   end
   object Datasource1: TDatasource
     DataSet = SQLQuery1
-    left = 616
-    top = 72
-  end
-  object SQLTransaction1: TSQLTransaction
-    Active = True
-    Action = caNone
-    Database = DataModuleROD.MySQLCon
-    left = 616
-    top = 136
+    left = 568
+    top = 8
   end
 end

@@ -55,7 +55,6 @@ type
     pStatus: TPanel;
     rStatus: TShape;
     SQLQuery1: TSQLQuery;
-    SQLTransaction1: TSQLTransaction;
     StatusBar1: TStatusBar;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
@@ -102,8 +101,6 @@ end;
 
 procedure TFGlowny.SQLQuery1BeforeClose(DataSet: TDataSet);
 begin
-  SQLTransaction1.CloseDataSets;
-  SQLTransaction1.EndTransaction;
 end;
 procedure TFGlowny.ToolButton1Click(Sender: TObject);
 begin
@@ -118,6 +115,7 @@ end;
 
 procedure TFGlowny.FormCreate(Sender: TObject);
 begin
+  SQLQuery1.Active:=TRUE;
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
@@ -139,8 +137,6 @@ begin
     dbgDzialki.Enabled:=TRUE;
     dbgDzialki.Refresh;
   end else begin
-    SQLTransaction1.EndTransaction;
-    SQLTransaction1.Active:=FALSE;
     SQLQuery1.Active:=FALSE;
     Datasource1.Enabled:=FALSE;
   end;
@@ -153,7 +149,8 @@ end;
 
 procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-
+    SQLQuery1.Active:=FALSE;
+//    mysql55conn.;
 end;
 
 
