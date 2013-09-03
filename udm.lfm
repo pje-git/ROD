@@ -19,7 +19,7 @@ object DataModuleROD: TDataModuleROD
     HostName = 'localhost'
     OnLog = MySQLConLog
     LogEvents = []
-    left = 48
+    left = 56
     top = 16
   end
   object EventLog1: TEventLog
@@ -38,9 +38,36 @@ object DataModuleROD: TDataModuleROD
   end
   object SQLTransaction1: TSQLTransaction
     Active = True
-    Action = caCommit
+    Action = caNone
     Database = MySQLCon
     left = 136
     top = 16
+  end
+  object IniOgolne: TIniPropStorage
+    StoredValues = <    
+      item
+        Name = 'mySQLSerwer'
+        Value = 'localhost'
+        KeyString = 'mySQLSerwer'
+      end    
+      item
+        Name = 'mySQLDBName'
+        Value = 'rod'
+        KeyString = 'mySQLDBName'
+      end    
+      item
+        Name = 'mySQLUserName'
+        Value = 'pawel'
+        KeyString = 'mySQLUserName'
+      end    
+      item
+        Name = 'mySQLUserPass'
+        Value = 'pawel123'
+        KeyString = 'mySQLUserPass'
+      end>
+    IniFileName = 'rod.ini'
+    IniSection = 'OGOLNE'
+    left = 136
+    top = 80
   end
 end

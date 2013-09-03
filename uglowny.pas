@@ -25,10 +25,10 @@ type
     aEnergia: TAction;
     alGlowny: TActionList;
     Button1: TButton;
-    Datasource1: TDatasource;
+    dsDzialka: TDatasource;
     Edit1: TEdit;
     dbgDzialki: TFZDBGrid;
-    IniGeneralSettings: TIniPropStorage;
+    IniDzialka: TIniPropStorage;
     Label1: TLabel;
     Label2: TLabel;
     lStatus: TLabel;
@@ -54,7 +54,8 @@ type
     mKsiegowosc: TMenuItem;
     pStatus: TPanel;
     rStatus: TShape;
-    SQLQuery1: TSQLQuery;
+    sqlDzialka1: TSQLQuery;
+    trDzialka: TSQLTransaction;
     StatusBar1: TStatusBar;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
@@ -68,7 +69,7 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mSprzedarzClick(Sender: TObject);
-    procedure SQLQuery1BeforeClose(DataSet: TDataSet);
+    procedure sqlDzialka1BeforeClose(DataSet: TDataSet);
     procedure ToolButton1Click(Sender: TObject);
   private
     procedure ConnectToMySQL55;
@@ -99,12 +100,12 @@ begin
   aSprzedarz.Execute;
 end;
 
-procedure TFGlowny.SQLQuery1BeforeClose(DataSet: TDataSet);
+procedure TFGlowny.sqlDzialka1BeforeClose(DataSet: TDataSet);
 begin
 end;
 procedure TFGlowny.ToolButton1Click(Sender: TObject);
 begin
-   SQLQuery1.ExecSQL;
+   sqlDzialka1.ExecSQL;
 end;
 
 procedure TFGlowny.ConnectToMySQL55;
@@ -115,7 +116,7 @@ end;
 
 procedure TFGlowny.FormCreate(Sender: TObject);
 begin
-  SQLQuery1.Active:=TRUE;
+  sqlDzialka1.Active:=TRUE;
   DataModuleROD.lStatusMsg:=lStatus;
   DataModuleROD.rStatusShape:=rStatus;
   DataModuleROD.bConnect:=Button1;
@@ -131,14 +132,14 @@ procedure TFGlowny.Button1Click(Sender: TObject);
 begin
   ConnectToMySQL55;
   if DataModuleROD.MySQLCon.Connected then begin
-    SQLQuery1.ExecSQL;
-    SQLQuery1.Active:=TRUE;
-    Datasource1.Enabled:=TRUE;
+    sqlDzialka1.ExecSQL;
+    sqlDzialka1.Active:=TRUE;
+    dsDzialka.Enabled:=TRUE;
     dbgDzialki.Enabled:=TRUE;
     dbgDzialki.Refresh;
   end else begin
-    SQLQuery1.Active:=FALSE;
-    Datasource1.Enabled:=FALSE;
+    sqlDzialka1.Active:=FALSE;
+    dsDzialka.Enabled:=FALSE;
   end;
 end;
 
@@ -149,7 +150,7 @@ end;
 
 procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-    SQLQuery1.Active:=FALSE;
+    sqlDzialka1.Active:=FALSE;
 //    mysql55conn.;
 end;
 

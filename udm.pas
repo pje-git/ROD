@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, mysql55conn, sqldb, eventlog,Graphics, PJGlobal,
-  StdCtrls, ExtCtrls;
+  StdCtrls, ExtCtrls, IniPropStorage;
 
 type
 
@@ -15,6 +15,7 @@ type
   TDataModuleROD = class(TDataModule)
 
     EventLog1: TEventLog;
+    IniOgolne: TIniPropStorage;
     MySQLCon: TMySQL55Connection;
     SQLTransaction1: TSQLTransaction;
     procedure MySQLConAfterConnect(Sender: TObject);
