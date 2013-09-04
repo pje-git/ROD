@@ -16,8 +16,8 @@ type
 
     EventLog1: TEventLog;
     IniOgolne: TIniPropStorage;
-    MySQLCon: TMySQL55Connection;
     SQLTransaction1: TSQLTransaction;
+    MySQLCon: TMySQL55Connection;
     procedure MySQLConAfterConnect(Sender: TObject);
     procedure MySQLConAfterDisconnect(Sender: TObject);
     procedure MySQLConBeforeConnect(Sender: TObject);

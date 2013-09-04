@@ -2,33 +2,33 @@ object DataModuleROD: TDataModuleROD
   OldCreateOrder = False
   Height = 166
   HorizontalOffset = 1144
-  VerticalOffset = 574
+  VerticalOffset = 577
   Width = 246
   object MySQLCon: TMySQL55Connection
-    Connected = True
+    Connected = False
     LoginPrompt = True
     AfterConnect = MySQLConAfterConnect
     AfterDisconnect = MySQLConAfterDisconnect
     BeforeDisconnect = MySQLConBeforeDisconnect
     DatabaseName = 'rod'
-    KeepConnection = False
+    KeepConnection = True
     Password = 'pawel123'
-    Transaction = SQLTransaction1
+    Transaction = trConnect
     UserName = 'pawel'
     CharSet = 'UTF8'
     HostName = 'localhost'
     OnLog = MySQLConLog
-    LogEvents = []
     left = 56
     top = 16
   end
   object EventLog1: TEventLog
     AppendContent = False
+    Identification = 'DataModule'
     LogType = ltFile
     Active = False
     RaiseExceptionOnError = True
     DefaultEventType = etCustom
-    FileName = 'typhon.log'
+    FileName = 'rod.log'
     TimeStampFormat = 'YYYY-MM-DD hh:nn:ss '
     CustomLogType = 0
     EventIDOffset = 0
@@ -36,9 +36,9 @@ object DataModuleROD: TDataModuleROD
     left = 56
     top = 80
   end
-  object SQLTransaction1: TSQLTransaction
-    Active = True
-    Action = caNone
+  object trConnect: TSQLTransaction
+    Active = False
+    Action = caCommit
     Database = MySQLCon
     left = 136
     top = 16

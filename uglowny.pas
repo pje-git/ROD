@@ -55,6 +55,10 @@ type
     pStatus: TPanel;
     rStatus: TShape;
     sqlDzialka1: TSQLQuery;
+    sqlDzialka1imie: TStringField;
+    sqlDzialka1metraz: TLongintField;
+    sqlDzialka1nazwisko: TStringField;
+    sqlDzialka1numer: TStringField;
     trDzialka: TSQLTransaction;
     StatusBar1: TStatusBar;
     ToolBar1: TToolBar;
@@ -66,6 +70,7 @@ type
     procedure aSprzedarzExecute(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Edit1Enter(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mSprzedarzClick(Sender: TObject);
@@ -148,10 +153,16 @@ begin
   if Edit1.Text = 'Podaj numer' then Edit1.Text := '';
 end;
 
+procedure TFGlowny.FormActivate(Sender: TObject);
+begin
+
+end;
+
 procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
     sqlDzialka1.Active:=FALSE;
-//    mysql55conn.;
+    trDzialka.CloseDataSets;
+
 end;
 
 

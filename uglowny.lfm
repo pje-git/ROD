@@ -1,12 +1,13 @@
 object FGlowny: TFGlowny
-  Left = 310
+  Left = 308
   Height = 423
-  Top = 165
+  Top = 157
   Width = 667
   Caption = 'ROD - Zarządzanie'
   ClientHeight = 403
   ClientWidth = 667
   Menu = mGlowne
+  OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '1.1'
@@ -54,7 +55,7 @@ object FGlowny: TFGlowny
   object pStatus: TPanel
     Left = 8
     Height = 26
-    Top = 344
+    Top = 352
     Width = 552
     ClientHeight = 26
     ClientWidth = 552
@@ -177,7 +178,7 @@ object FGlowny: TFGlowny
     UseXORFeatures = True
   end
   object mGlowne: TMainMenu
-    left = 531
+    left = 544
     top = 8
     object mFile: TMenuItem
       Caption = '&Plik'
@@ -301,6 +302,7 @@ object FGlowny: TFGlowny
     top = 8
   end
   object sqlDzialka1: TSQLQuery
+    PacketRecords = 1
     IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
@@ -343,17 +345,61 @@ object FGlowny: TFGlowny
     Params = <>
     left = 264
     top = 8
+    object sqlDzialka1nazwisko: TStringField
+      DisplayWidth = 192
+      FieldKind = fkData
+      FieldName = 'nazwisko'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 192
+    end
+    object sqlDzialka1imie: TStringField
+      DisplayWidth = 96
+      FieldKind = fkData
+      FieldName = 'imie'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 96
+    end
+    object sqlDzialka1numer: TStringField
+      DisplayWidth = 24
+      FieldKind = fkData
+      FieldName = 'numer'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 24
+    end
+    object sqlDzialka1metraz: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'metraz'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
   end
   object dsDzialka: TDatasource
     DataSet = sqlDzialka1
-    left = 344
+    Enabled = False
+    left = 328
     top = 8
   end
   object trDzialka: TSQLTransaction
-    Active = False
-    Action = caNone
+    Active = True
+    Action = caCommit
     Database = DataModuleROD.MySQLCon
-    left = 304
+    left = 392
     top = 8
   end
 end

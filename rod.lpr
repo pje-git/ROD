@@ -19,5 +19,6 @@ begin
   Application.CreateForm(TDataModuleROD, DataModuleROD);
   Application.CreateForm(TFGlowny, FGlowny);
   Application.Run;
+  FGlowny.dsDzialka.Enabled:=False;
 end.
 
