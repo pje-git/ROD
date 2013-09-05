@@ -17,24 +17,8 @@ object DataModuleROD: TDataModuleROD
     UserName = 'pawel'
     CharSet = 'UTF8'
     HostName = 'localhost'
-    OnLog = MySQLConLog
     left = 56
     top = 16
-  end
-  object EventLog1: TEventLog
-    AppendContent = False
-    Identification = 'DataModule'
-    LogType = ltFile
-    Active = False
-    RaiseExceptionOnError = True
-    DefaultEventType = etCustom
-    FileName = 'rod.log'
-    TimeStampFormat = 'YYYY-MM-DD hh:nn:ss '
-    CustomLogType = 0
-    EventIDOffset = 0
-    Paused = False
-    left = 56
-    top = 80
   end
   object trConnect: TSQLTransaction
     Active = False

@@ -14,7 +14,6 @@ type
 
   TDataModuleROD = class(TDataModule)
 
-    EventLog1: TEventLog;
     IniOgolne: TIniPropStorage;
     SQLTransaction1: TSQLTransaction;
     MySQLCon: TMySQL55Connection;
@@ -22,8 +21,8 @@ type
     procedure MySQLConAfterDisconnect(Sender: TObject);
     procedure MySQLConBeforeConnect(Sender: TObject);
     procedure MySQLConBeforeDisconnect(Sender: TObject);
-    procedure MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
-      const Msg: String);
+//    procedure MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
+//      const Msg: String);
   private
     { private declarations }
     globalRec: TGlobalRec;
@@ -43,14 +42,14 @@ implementation
 {$R *.lfm}
 
 { TDataModuleROD }
-
+{*
 procedure TDataModuleROD.MySQLConLog(Sender: TSQLConnection;
   EventType: TDBEventType; const Msg: String);
 begin
   eventlog1.Log(Msg);
   lStatusMsg.Caption:=Msg;
 end;
-
+  *}
 
 procedure TDataModuleROD.MySQLConBeforeConnect(Sender: TObject);
 begin

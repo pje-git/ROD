@@ -1,11 +1,11 @@
 object FGlowny: TFGlowny
-  Left = 308
+  Left = 339
   Height = 423
-  Top = 157
-  Width = 667
+  Top = 216
+  Width = 729
   Caption = 'ROD - Zarządzanie'
   ClientHeight = 403
-  ClientWidth = 667
+  ClientWidth = 729
   Menu = mGlowne
   OnActivate = FormActivate
   OnClose = FormClose
@@ -38,9 +38,9 @@ object FGlowny: TFGlowny
     Text = 'Podaj numer'
   end
   object Label2: TLabel
-    Left = 16
+    Left = 8
     Height = 18
-    Top = 36
+    Top = 9
     Width = 60
     Caption = '&Działka :'
     Font.CharSet = EASTEUROPE_CHARSET
@@ -92,14 +92,14 @@ object FGlowny: TFGlowny
     Left = 0
     Height = 23
     Top = 380
-    Width = 667
+    Width = 729
     Panels = <>
   end
   object ToolBar1: TToolBar
     Left = 0
     Height = 26
     Top = 0
-    Width = 667
+    Width = 729
     Caption = 'ToolBar1'
     TabOrder = 4
     object ToolButton1: TToolButton
@@ -115,17 +115,17 @@ object FGlowny: TFGlowny
       Caption = 'ToolButton2'
     end
     object ToolButton3: TToolButton
-      Left = 47
+      Left = 80
       Top = 2
       Caption = 'ToolButton3'
     end
     object ToolButton4: TToolButton
-      Left = 70
+      Left = 47
       Top = 2
       Caption = 'ToolButton4'
     end
     object ToolButton5: TToolButton
-      Left = 93
+      Left = 70
       Top = 2
       Width = 10
       Caption = 'ToolButton5'
@@ -133,7 +133,7 @@ object FGlowny: TFGlowny
     end
   end
   object dbgDzialki: TFZDBGrid
-    Left = 8
+    Left = 0
     Height = 236
     Top = 72
     Width = 656
@@ -179,7 +179,7 @@ object FGlowny: TFGlowny
   end
   object mGlowne: TMainMenu
     left = 544
-    top = 8
+    top = 24
     object mFile: TMenuItem
       Caption = '&Plik'
       object mImport: TMenuItem
@@ -244,8 +244,8 @@ object FGlowny: TFGlowny
     end
   end
   object alGlowny: TActionList
-    left = 496
-    top = 8
+    left = 504
+    top = 24
     object aEnergia: TAction
       Caption = '&Energia'
     end
@@ -299,7 +299,7 @@ object FGlowny: TFGlowny
     IniFileName = 'rod.ini'
     IniSection = 'DZILKA'
     left = 464
-    top = 8
+    top = 24
   end
   object sqlDzialka1: TSQLQuery
     PacketRecords = 1
@@ -336,15 +336,15 @@ object FGlowny: TFGlowny
         Size = 192
       end>
     BeforeClose = sqlDzialka1BeforeClose
-    Database = DataModuleROD.MySQLCon
+    Database = MySQLCon
     Transaction = trDzialka
     SQL.Strings = (
       'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
       'where da.id_dzialka=dc.id_dzialka'
     )
     Params = <>
-    left = 264
-    top = 8
+    left = 672
+    top = 80
     object sqlDzialka1nazwisko: TStringField
       DisplayWidth = 192
       FieldKind = fkData
@@ -392,14 +392,43 @@ object FGlowny: TFGlowny
   object dsDzialka: TDatasource
     DataSet = sqlDzialka1
     Enabled = False
-    left = 328
-    top = 8
+    left = 672
+    top = 176
   end
   object trDzialka: TSQLTransaction
     Active = True
     Action = caCommit
-    Database = DataModuleROD.MySQLCon
-    left = 392
-    top = 8
+    Database = MySQLCon
+    left = 672
+    top = 120
+  end
+  object MySQLCon: TMySQL55Connection
+    Connected = True
+    LoginPrompt = True
+    DatabaseName = 'rod'
+    KeepConnection = True
+    Password = 'pawel123'
+    Transaction = trDzialka
+    UserName = 'pawel'
+    CharSet = 'UTF8'
+    HostName = 'localhost'
+    OnLog = MySQLConLog
+    left = 672
+    top = 48
+  end
+  object logDzialka: TEventLog
+    AppendContent = False
+    Identification = 'DZIAŁKA'
+    LogType = ltFile
+    Active = False
+    RaiseExceptionOnError = True
+    DefaultEventType = etInfo
+    FileName = 'rod-log.txt'
+    TimeStampFormat = 'YYYY-MM-DD hh:nn:ss '
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    left = 432
+    top = 24
   end
 end

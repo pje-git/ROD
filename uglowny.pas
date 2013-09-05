@@ -8,7 +8,8 @@ uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
   IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker,
-  ubarcodes, cyColorMatrix, FZDB, JDBGridControl, udm, PJGlobal, Classes;
+  ubarcodes, cyColorMatrix, FZDB, JDBGridControl, udm, PJGlobal, eventlog,
+  Classes;
 
 type
 
@@ -28,6 +29,7 @@ type
     dsDzialka: TDatasource;
     Edit1: TEdit;
     dbgDzialki: TFZDBGrid;
+    logDzialka: TEventLog;
     IniDzialka: TIniPropStorage;
     Label1: TLabel;
     Label2: TLabel;
@@ -40,6 +42,7 @@ type
     mDzialkowiec: TMenuItem;
     mSprzedarz: TMenuItem;
     mWalne: TMenuItem;
+    MySQLCon: TMySQL55Connection;
     mZarzad: TMenuItem;
     mRozliczenia: TMenuItem;
     mPomoc: TMenuItem;
@@ -74,6 +77,8 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mSprzedarzClick(Sender: TObject);
+    procedure MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
+      const Msg: String);
     procedure sqlDzialka1BeforeClose(DataSet: TDataSet);
     procedure ToolButton1Click(Sender: TObject);
   private
@@ -105,6 +110,12 @@ begin
   aSprzedarz.Execute;
 end;
 
+procedure TFGlowny.MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
+  const Msg: String);
+begin
+  logDzialka.Info(Msg);
+end;
+
 procedure TFGlowny.sqlDzialka1BeforeClose(DataSet: TDataSet);
 begin
 end;
@@ -122,9 +133,9 @@ end;
 procedure TFGlowny.FormCreate(Sender: TObject);
 begin
   sqlDzialka1.Active:=TRUE;
-  DataModuleROD.lStatusMsg:=lStatus;
-  DataModuleROD.rStatusShape:=rStatus;
-  DataModuleROD.bConnect:=Button1;
+//  DataModuleROD.lStatusMsg:=lStatus;
+//  DataModuleROD.rStatusShape:=rStatus;
+//  DataModuleROD.bConnect:=Button1;
 //  ConnectToMySQL55;
 end;
 
@@ -160,8 +171,9 @@ end;
 
 procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-    sqlDzialka1.Active:=FALSE;
-    trDzialka.CloseDataSets;
+//    trDzialka.Commit;
+//    trDzialka.EndTransaction;
+//    trDzialka.Active:=FALSE;
 
 end;
 

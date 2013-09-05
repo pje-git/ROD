@@ -10,6 +10,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
+#: tfdzialka.caption
+msgid "ROD -> Działka"
+msgstr ""
+
 #: tfglowny.aclose.caption
 msgid "&Koniec"
 msgstr ""

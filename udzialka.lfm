@@ -1,0 +1,8 @@
+object fDzialka: TfDzialka
+  Left = 419
+  Height = 443
+  Top = 258
+  Width = 596
+  Caption = 'ROD -> Działka'
+  LCLVersion = '1.1'
+end

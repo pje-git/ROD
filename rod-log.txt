@@ -1,0 +1,2 @@
+DZIAŁKA [2013-09-04 18:50:01  Info] TQuerySQLStatement : select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc
+where da.id_dzialka=dc.id_dzialka
