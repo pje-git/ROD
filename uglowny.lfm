@@ -1,36 +1,21 @@
 object FGlowny: TFGlowny
-  Left = 339
+  Left = 394
   Height = 423
-  Top = 216
-  Width = 729
+  Top = 213
+  Width = 756
   Caption = 'ROD - Zarządzanie'
   ClientHeight = 403
-  ClientWidth = 729
+  ClientWidth = 756
   Menu = mGlowne
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '1.1'
-  object Label1: TLabel
-    Left = 16
-    Height = 18
-    Top = 8
-    Width = 60
-    Caption = '&Działka :'
-    Font.CharSet = EASTEUROPE_CHARSET
-    Font.Color = clMaroon
-    Font.Height = -16
-    Font.Name = 'Arial'
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    ParentColor = False
-    ParentFont = False
-  end
   object Edit1: TEdit
-    Left = 88
+    Left = 272
     Height = 23
     Hint = 'Podaj numer działki lub nazwisko właściciela'
-    Top = 4
+    Top = 64
     Width = 80
     OnClick = Edit1Enter
     OnEnter = Edit1Enter
@@ -38,9 +23,9 @@ object FGlowny: TFGlowny
     Text = 'Podaj numer'
   end
   object Label2: TLabel
-    Left = 8
+    Left = 256
     Height = 18
-    Top = 9
+    Top = 24
     Width = 60
     Caption = '&Działka :'
     Font.CharSet = EASTEUROPE_CHARSET
@@ -52,134 +37,266 @@ object FGlowny: TFGlowny
     ParentColor = False
     ParentFont = False
   end
-  object pStatus: TPanel
-    Left = 8
-    Height = 26
-    Top = 352
-    Width = 552
-    ClientHeight = 26
-    ClientWidth = 552
+  object pGlowny: TPanel
+    Left = 0
+    Height = 380
+    Top = 0
+    Width = 756
+    Align = alClient
+    ClientHeight = 380
+    ClientWidth = 756
     TabOrder = 1
-    object rStatus: TShape
-      Left = 8
-      Height = 16
-      Top = 4
-      Width = 17
-      Brush.Color = clRed
-      Pen.Color = clBackground
-      Pen.EndCap = pecFlat
-      Shape = stRoundRect
-    end
-    object lStatus: TLabel
-      Left = 40
-      Height = 15
-      Top = 4
-      Width = 153
-      Caption = 'Nie połączono z bazą danych'
-      ParentColor = False
+    object tbGlowny: TPageControl
+      Left = 1
+      Height = 378
+      Top = 1
+      Width = 754
+      ActivePage = pgModyly
+      Align = alClient
+      MultiLine = True
+      TabIndex = 0
+      TabOrder = 0
+      Options = [nboShowCloseButtons, nboMultiLine, nboHidePageListPopup, nboKeyboardTabSwitch, nboShowAddTabButton]
+      object pgModyly: TTabSheet
+        BiDiMode = bdRightToLeft
+        Caption = 'Moduły'
+        ClientHeight = 350
+        ClientWidth = 746
+        ParentBiDiMode = False
+        object bDziaki: TFZDropDownButton
+          Left = 27
+          Height = 48
+          Top = 23
+          Width = 160
+          Appearance.Border.Normal.Color = clBlue
+          Appearance.Border.Normal.Width = 2
+          Appearance.Border.Normal.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Normal.Visible = False
+          Appearance.Border.Hover.Color = clBlack
+          Appearance.Border.Hover.Width = 2
+          Appearance.Border.Hover.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Hover.Visible = True
+          Appearance.Border.HotTrack = False
+          Appearance.Color.Normal = clInactiveCaption
+          Appearance.Color.Hover = clMenuHighlight
+          Appearance.Color.HotTrack = True
+          Appearance.Font.Normal.Quality = fqCleartypeNatural
+          Appearance.Font.Hover.Style = [fsBold]
+          Appearance.Font.HotTrack = True
+          Appearance.Icon.Normal.Color = clBlack
+          Appearance.Icon.Normal.Width = 1
+          Appearance.Icon.Hover.Color = clBlack
+          Appearance.Icon.Hover.Width = 1
+          Appearance.Icon.HotTrack = False
+          BorderSpacing.Left = 2
+          BorderSpacing.Top = 2
+          BorderSpacing.Right = 2
+          BorderSpacing.InnerBorder = 2
+          BorderWidth = 2
+          TabOrder = 0
+          Constraints.MinHeight = 22
+          Constraints.MinWidth = 22
+          ImageStyle = isLeft
+          Spacing = 4
+          ShowCaption = True
+          Caption = 'Działki'
+        end
+        object FZDropDownButton4: TFZDropDownButton
+          Left = 27
+          Height = 48
+          Top = 191
+          Width = 160
+          Appearance.Border.Normal.Color = clSilver
+          Appearance.Border.Normal.Width = 1
+          Appearance.Border.Normal.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Normal.Visible = False
+          Appearance.Border.Hover.Color = clBlack
+          Appearance.Border.Hover.Width = 0
+          Appearance.Border.Hover.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Hover.Visible = True
+          Appearance.Border.HotTrack = False
+          Appearance.Color.Normal = 16744703
+          Appearance.Color.Hover = 8388863
+          Appearance.Color.HotTrack = True
+          Appearance.Font.HotTrack = False
+          Appearance.Icon.Normal.Color = clBlack
+          Appearance.Icon.Normal.Width = 1
+          Appearance.Icon.Hover.Color = clBlack
+          Appearance.Icon.Hover.Width = 1
+          Appearance.Icon.HotTrack = False
+          TabOrder = 1
+          Constraints.MinHeight = 22
+          Constraints.MinWidth = 22
+          ImageStyle = isLeft
+          Spacing = 4
+          ShowCaption = True
+          Caption = 'Sala'
+        end
+        object FZDropDownButton2: TFZDropDownButton
+          Left = 27
+          Height = 48
+          Top = 79
+          Width = 160
+          Appearance.Border.Normal.Color = 4210688
+          Appearance.Border.Normal.Width = 2
+          Appearance.Border.Normal.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Normal.Visible = False
+          Appearance.Border.Hover.Color = clGreen
+          Appearance.Border.Hover.Width = 2
+          Appearance.Border.Hover.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Hover.Visible = True
+          Appearance.Border.HotTrack = False
+          Appearance.Color.Normal = clMoneyGreen
+          Appearance.Color.Hover = clTeal
+          Appearance.Color.HotTrack = True
+          Appearance.Font.HotTrack = False
+          Appearance.Icon.Normal.Color = clBlack
+          Appearance.Icon.Normal.Width = 1
+          Appearance.Icon.Hover.Color = clBlack
+          Appearance.Icon.Hover.Width = 1
+          Appearance.Icon.HotTrack = False
+          TabOrder = 2
+          Constraints.MinHeight = 22
+          Constraints.MinWidth = 22
+          ImageStyle = isLeft
+          Spacing = 4
+          ShowCaption = True
+          Caption = 'Działkowcy'
+        end
+        object FZDropDownButton3: TFZDropDownButton
+          Left = 27
+          Height = 48
+          Top = 135
+          Width = 160
+          Appearance.Border.Normal.Color = clSilver
+          Appearance.Border.Normal.Width = 1
+          Appearance.Border.Normal.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Normal.Visible = False
+          Appearance.Border.Hover.Color = clBlack
+          Appearance.Border.Hover.Width = 0
+          Appearance.Border.Hover.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Hover.Visible = True
+          Appearance.Border.HotTrack = False
+          Appearance.Color.Normal = 8454143
+          Appearance.Color.Hover = clYellow
+          Appearance.Color.HotTrack = True
+          Appearance.Font.HotTrack = False
+          Appearance.Icon.Normal.Color = clBlack
+          Appearance.Icon.Normal.Width = 1
+          Appearance.Icon.Hover.Color = clBlack
+          Appearance.Icon.Hover.Width = 1
+          Appearance.Icon.HotTrack = False
+          TabOrder = 3
+          Constraints.MinHeight = 22
+          Constraints.MinWidth = 22
+          ImageStyle = isLeft
+          Spacing = 4
+          ShowCaption = True
+          Caption = 'Media'
+        end
+        object FZDropDownButton5: TFZDropDownButton
+          Left = 27
+          Height = 48
+          Top = 247
+          Width = 160
+          Appearance.Border.Normal.Color = clSilver
+          Appearance.Border.Normal.Width = 1
+          Appearance.Border.Normal.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Normal.Visible = False
+          Appearance.Border.Hover.Color = clBlack
+          Appearance.Border.Hover.Width = 0
+          Appearance.Border.Hover.Option = [mboTop, mboLeft, mboBottom, mboRight]
+          Appearance.Border.Hover.Visible = True
+          Appearance.Border.HotTrack = False
+          Appearance.Color.Normal = 10328048
+          Appearance.Color.Hover = clRed
+          Appearance.Color.HotTrack = True
+          Appearance.Font.HotTrack = False
+          Appearance.Icon.Normal.Color = clBlack
+          Appearance.Icon.Normal.Width = 1
+          Appearance.Icon.Hover.Color = clBlack
+          Appearance.Icon.Hover.Width = 1
+          Appearance.Icon.HotTrack = False
+          TabOrder = 4
+          Constraints.MinHeight = 22
+          Constraints.MinWidth = 22
+          ImageStyle = isLeft
+          Spacing = 4
+          ShowCaption = True
+          Caption = 'Księgowość'
+        end
+      end
+      object pgSzukaj: TTabSheet
+        Caption = 'Szukaj'
+      end
+      object pgLista: TTabSheet
+        Caption = 'Lista'
+      end
+      object pgConfig: TTabSheet
+        Caption = 'Ustawienia'
+        ClientHeight = 350
+        ClientWidth = 746
+        object TreeFilterEdit1: TTreeFilterEdit
+          Left = 3
+          Height = 23
+          Top = 7
+          Width = 136
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 0
+          TabOrder = 0
+          FilteredTreeview = CodyTreeView1
+        end
+        object CodyTreeView1: TCodyTreeView
+          Left = 3
+          Height = 273
+          Top = 31
+          Width = 160
+          DefaultItemHeight = 18
+          TabOrder = 1
+          Items.Data = {
+            F9FFFFFF020003000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000
+            00000008000000456C656D656E7430FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00
+            000000000000000008000000456C656D656E7431FFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFF02000000000000000108000000456C656D656E7432FFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFF03000000000000000108000000456C656D656E7433FFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000008000000456C656D65
+            6E7434FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000000008000000
+            456C656D656E7435FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000
+            0008000000456C656D656E7436FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF020000
+            00000000000108000000456C656D656E7437FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFF00000000000000000008000000456C656D656E7438FFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFF00000000000000000008000000456C656D656E7439
+          }
+        end
+      end
     end
   end
-  object Button1: TButton
-    Left = 16
-    Height = 25
-    Top = 312
-    Width = 75
-    Caption = 'Połącz'
-    OnClick = Button1Click
-    TabOrder = 2
-  end
-  object StatusBar1: TStatusBar
+  object sbGlowny: TStatusBar
     Left = 0
     Height = 23
     Top = 380
-    Width = 729
-    Panels = <>
-  end
-  object ToolBar1: TToolBar
-    Left = 0
-    Height = 26
-    Top = 0
-    Width = 729
-    Caption = 'ToolBar1'
-    TabOrder = 4
-    object ToolButton1: TToolButton
-      Left = 1
-      Top = 2
-      AutoSize = True
-      Caption = 'A'
-      OnClick = ToolButton1Click
-    end
-    object ToolButton2: TToolButton
-      Left = 24
-      Top = 2
-      Caption = 'ToolButton2'
-    end
-    object ToolButton3: TToolButton
-      Left = 80
-      Top = 2
-      Caption = 'ToolButton3'
-    end
-    object ToolButton4: TToolButton
-      Left = 47
-      Top = 2
-      Caption = 'ToolButton4'
-    end
-    object ToolButton5: TToolButton
-      Left = 70
-      Top = 2
-      Width = 10
-      Caption = 'ToolButton5'
-      Style = tbsSeparator
-    end
-  end
-  object dbgDzialki: TFZDBGrid
-    Left = 0
-    Height = 236
-    Top = 72
-    Width = 656
-    AutoEdit = False
-    Color = clWindow
-    Columns = <    
+    Width = 756
+    Panels = <    
+      item
+        Text = 'Moduł główny - ZARZĄDZANIE'
+        Width = 170
+      end    
       item
         Alignment = taCenter
-        ButtonStyle = cbsEllipsis
-        Title.Caption = 'Numer'
-        Width = 155
-        FieldName = 'numer'
+        Text = 'Połączono z bazą '
+        Width = 200
       end    
       item
-        Title.Caption = 'Imię'
-        Width = 155
-        FieldName = 'imie'
-      end    
-      item
-        Title.Caption = 'Nazwisko'
-        Width = 155
-        FieldName = 'nazwisko'
-      end    
-      item
-        ReadOnly = True
-        Title.Caption = 'Obszar'
-        Width = 158
-        FieldName = 'obszar'
+        Alignment = taRightJustify
+        Text = 'Licencja dla ROD "Trzy Korony" Pabianice     '
+        Width = 210
       end>
-    DataSource = dsDzialka
-    Flat = True
-    Font.Name = 'Gill Sans MT Condensed'
-    ParentFont = False
-    TabOrder = 5
-    TitleFont.CharSet = ANSI_CHARSET
-    TitleFont.Color = 16384
-    TitleFont.Height = -13
-    TitleFont.Name = '@Arial Unicode MS'
-    TitleFont.Pitch = fpVariable
-    TitleFont.Quality = fqDraft
-    TitleFont.Style = [fsBold]
-    UseXORFeatures = True
+    SimplePanel = False
   end
   object mGlowne: TMainMenu
-    left = 544
-    top = 24
+    left = 616
+    top = 80
     object mFile: TMenuItem
       Caption = '&Plik'
       object mImport: TMenuItem
@@ -244,8 +361,8 @@ object FGlowny: TFGlowny
     end
   end
   object alGlowny: TActionList
-    left = 504
-    top = 24
+    left = 616
+    top = 136
     object aEnergia: TAction
       Caption = '&Energia'
     end
@@ -298,19 +415,12 @@ object FGlowny: TFGlowny
       end>
     IniFileName = 'rod.ini'
     IniSection = 'DZILKA'
-    left = 464
-    top = 24
+    left = 616
+    top = 192
   end
   object sqlDzialka1: TSQLQuery
     PacketRecords = 1
-    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
-      item
-        Name = 'id_dzialka'
-        DataType = ftAutoInc
-        Precision = -1
-        Size = 0
-      end    
       item
         Name = 'numer'
         DataType = ftString
@@ -339,7 +449,7 @@ object FGlowny: TFGlowny
     Database = MySQLCon
     Transaction = trDzialka
     SQL.Strings = (
-      'select da.id_dzialka, da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
+      'select  da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
       'where da.id_dzialka=dc.id_dzialka'
     )
     Params = <>
@@ -393,18 +503,19 @@ object FGlowny: TFGlowny
     DataSet = sqlDzialka1
     Enabled = False
     left = 672
-    top = 176
+    top = 136
   end
   object trDzialka: TSQLTransaction
     Active = True
     Action = caCommit
     Database = MySQLCon
     left = 672
-    top = 120
+    top = 192
   end
   object MySQLCon: TMySQL55Connection
     Connected = True
     LoginPrompt = True
+    AfterConnect = MySQLConAfterConnect
     DatabaseName = 'rod'
     KeepConnection = True
     Password = 'pawel123'
@@ -413,8 +524,9 @@ object FGlowny: TFGlowny
     CharSet = 'UTF8'
     HostName = 'localhost'
     OnLog = MySQLConLog
+    LogEvents = []
     left = 672
-    top = 48
+    top = 248
   end
   object logDzialka: TEventLog
     AppendContent = False
@@ -428,7 +540,11 @@ object FGlowny: TFGlowny
     CustomLogType = 0
     EventIDOffset = 0
     Paused = False
-    left = 432
-    top = 24
+    left = 616
+    top = 248
+  end
+  object LSTrayIcon1: TLSTrayIcon
+    left = 672
+    top = 40
   end
 end

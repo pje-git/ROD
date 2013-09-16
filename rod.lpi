@@ -37,54 +37,102 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="15">
+    <RequiredPackages Count="31">
       <Item1>
-        <PackageName Value="pl_lazbarcodes"/>
+        <PackageName Value="pl_jvcl"/>
       </Item1>
       <Item2>
-        <PackageName Value="pl_cindy"/>
+        <PackageName Value="pl_orpheus"/>
       </Item2>
       <Item3>
-        <PackageName Value="pl_fzcontrols"/>
+        <PackageName Value="pl_shapespak"/>
       </Item3>
       <Item4>
-        <PackageName Value="pl_jujiboutils"/>
+        <PackageName Value="pl_virtualtrees"/>
       </Item4>
       <Item5>
-        <PackageName Value="SDFLaz"/>
+        <PackageName Value="pl_virtualtreesextra"/>
       </Item5>
       <Item6>
-        <PackageName Value="MemDSLaz"/>
+        <PackageName Value="Cody"/>
       </Item6>
       <Item7>
-        <PackageName Value="SynEdit"/>
+        <PackageName Value="pl_rx"/>
       </Item7>
       <Item8>
-        <PackageName Value="RunTimeTypeInfoControls"/>
+        <PackageName Value="pl_bgracontrols"/>
       </Item8>
       <Item9>
-        <PackageName Value="SQLDBLaz"/>
+        <PackageName Value="pl_openwire"/>
       </Item9>
       <Item10>
-        <PackageName Value="TAChartLazarusPkg"/>
+        <PackageName Value="pl_luicontrols"/>
       </Item10>
       <Item11>
-        <PackageName Value="TurboPowerIPro"/>
+        <PackageName Value="pl_lazsolutions"/>
       </Item11>
       <Item12>
-        <PackageName Value="LazControls"/>
+        <PackageName Value="pl_spktoolbar"/>
       </Item12>
       <Item13>
-        <PackageName Value="DBFLaz"/>
+        <PackageName Value="pl_freefpidercomp"/>
       </Item13>
       <Item14>
-        <PackageName Value="FCL"/>
+        <PackageName Value="pl_exdesign"/>
       </Item14>
       <Item15>
-        <PackageName Value="LCL"/>
+        <PackageName Value="pl_excontrols"/>
       </Item15>
+      <Item16>
+        <PackageName Value="pl_visualplanitcomp"/>
+      </Item16>
+      <Item17>
+        <PackageName Value="pl_lazbarcodes"/>
+      </Item17>
+      <Item18>
+        <PackageName Value="pl_cindy"/>
+      </Item18>
+      <Item19>
+        <PackageName Value="pl_fzcontrols"/>
+      </Item19>
+      <Item20>
+        <PackageName Value="pl_jujiboutils"/>
+      </Item20>
+      <Item21>
+        <PackageName Value="SDFLaz"/>
+      </Item21>
+      <Item22>
+        <PackageName Value="MemDSLaz"/>
+      </Item22>
+      <Item23>
+        <PackageName Value="SynEdit"/>
+      </Item23>
+      <Item24>
+        <PackageName Value="RunTimeTypeInfoControls"/>
+      </Item24>
+      <Item25>
+        <PackageName Value="SQLDBLaz"/>
+      </Item25>
+      <Item26>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item26>
+      <Item27>
+        <PackageName Value="TurboPowerIPro"/>
+      </Item27>
+      <Item28>
+        <PackageName Value="LazControls"/>
+      </Item28>
+      <Item29>
+        <PackageName Value="DBFLaz"/>
+      </Item29>
+      <Item30>
+        <PackageName Value="FCL"/>
+      </Item30>
+      <Item31>
+        <PackageName Value="LCL"/>
+      </Item31>
     </RequiredPackages>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="rod.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -128,9 +176,18 @@
         <Filename Value="udzialka.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="fDzialka"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UDzialka"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="udzialki.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fDzialki"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UDzialki"/>
+      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

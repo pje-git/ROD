@@ -1,0 +1,412 @@
+object fDzialki: TfDzialki
+  Left = 297
+  Height = 436
+  Top = 200
+  Width = 799
+  Caption = 'ROD - Działki'
+  ClientHeight = 416
+  ClientWidth = 799
+  Menu = mGlowne
+  LCLVersion = '1.1'
+  object Label1: TLabel
+    Left = 16
+    Height = 18
+    Top = 8
+    Width = 60
+    Caption = '&Działka :'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 88
+    Height = 23
+    Hint = 'Podaj numer działki lub nazwisko właściciela'
+    Top = 4
+    Width = 80
+    TabOrder = 0
+    Text = 'Podaj numer'
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 18
+    Top = 9
+    Width = 60
+    Caption = '&Działka :'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object pStatus: TPanel
+    Left = 8
+    Height = 26
+    Top = 352
+    Width = 552
+    ClientHeight = 26
+    ClientWidth = 552
+    TabOrder = 1
+    object rStatus: TShape
+      Left = 8
+      Height = 16
+      Top = 4
+      Width = 17
+      Brush.Color = clRed
+      Pen.Color = clBackground
+      Pen.EndCap = pecFlat
+      Shape = stRoundRect
+    end
+    object lStatus: TLabel
+      Left = 40
+      Height = 15
+      Top = 4
+      Width = 153
+      Caption = 'Nie połączono z bazą danych'
+      ParentColor = False
+    end
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'Połącz'
+    TabOrder = 2
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 799
+    Caption = 'ToolBar1'
+    TabOrder = 3
+    object ToolButton1: TToolButton
+      Left = 1
+      Top = 2
+      AutoSize = True
+      Caption = 'A'
+    end
+    object ToolButton2: TToolButton
+      Left = 24
+      Top = 2
+      Caption = 'ToolButton2'
+    end
+    object ToolButton3: TToolButton
+      Left = 80
+      Top = 2
+      Caption = 'ToolButton3'
+    end
+    object ToolButton4: TToolButton
+      Left = 47
+      Top = 2
+      Caption = 'ToolButton4'
+    end
+    object ToolButton5: TToolButton
+      Left = 70
+      Top = 2
+      Width = 10
+      Caption = 'ToolButton5'
+      Style = tbsSeparator
+    end
+  end
+  object dbgDzialki: TFZDBGrid
+    Left = 56
+    Height = 244
+    Top = 40
+    Width = 616
+    AutoEdit = False
+    Color = clWindow
+    Columns = <    
+      item
+        Alignment = taCenter
+        ButtonStyle = cbsEllipsis
+        Title.Caption = 'Numer'
+        Width = 155
+        FieldName = 'numer'
+      end    
+      item
+        Title.Caption = 'Imię'
+        Width = 155
+        FieldName = 'imie'
+      end    
+      item
+        Title.Caption = 'Nazwisko'
+        Width = 155
+        FieldName = 'nazwisko'
+      end    
+      item
+        Title.Caption = 'Obszar'
+        Width = 158
+        FieldName = 'metraz'
+      end>
+    DataSource = dsDzialka
+    Flat = True
+    Font.Name = 'Gill Sans MT Condensed'
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 4
+    TitleFont.CharSet = ANSI_CHARSET
+    TitleFont.Color = 16384
+    TitleFont.Height = -13
+    TitleFont.Name = '@Arial Unicode MS'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+    UseXORFeatures = True
+  end
+  object mGlowne: TMainMenu
+    left = 572
+    top = 52
+    object mFile: TMenuItem
+      Caption = '&Plik'
+      object mImport: TMenuItem
+        Action = aImport
+      end
+      object mExport: TMenuItem
+        Action = aExport
+      end
+      object mClose: TMenuItem
+        Action = aClose
+      end
+    end
+    object mRozliczenia: TMenuItem
+      Caption = '&Rozliczenie'
+      object mDzialkowiec: TMenuItem
+        Action = aDzialkowiec
+      end
+      object mWoda: TMenuItem
+        Action = aWoda
+      end
+      object mPrad: TMenuItem
+        Action = aEnergia
+      end
+      object mSala: TMenuItem
+        Action = aSala
+      end
+    end
+    object mObsluga: TMenuItem
+      Caption = '&Obsługa'
+      object mSprzedarz: TMenuItem
+        Action = aSprzedarz
+      end
+      object mWalne: TMenuItem
+        Caption = '&Walne zebranie'
+      end
+      object mZarzad: TMenuItem
+        Caption = '&Zarząd'
+      end
+    end
+    object mKsiegowosc: TMenuItem
+      Caption = '&Księgowość'
+    end
+    object mNarzedzia: TMenuItem
+      Caption = '&Narzędzia'
+      RightJustify = True
+      object mSets: TMenuItem
+        Caption = '&Ustawienia'
+        ShortCut = 16469
+      end
+      object mAdmin: TMenuItem
+        Caption = '&Administracja'
+      end
+      object mMaintenance: TMenuItem
+        Caption = '&Konserwacja'
+      end
+    end
+    object mPomoc: TMenuItem
+      Caption = '&Pomoc'
+      RightJustify = True
+      ShortCut = 112
+    end
+  end
+  object alGlowny: TActionList
+    left = 532
+    top = 52
+    object aEnergia: TAction
+      Caption = '&Energia'
+    end
+    object aWoda: TAction
+      Caption = '&Woda'
+    end
+    object aSala: TAction
+      Caption = '&Sala'
+    end
+    object aDzialkowiec: TAction
+      Caption = '&Działkowiec'
+    end
+    object aImport: TAction
+      Caption = '&Import'
+    end
+    object aExport: TAction
+      Caption = '&Eksport'
+    end
+    object aClose: TAction
+      Caption = '&Koniec'
+      ShortCut = 16472
+    end
+    object aSprzedarz: TAction
+      Caption = '&Sprzedarz działki'
+      ShortCut = 16464
+    end
+  end
+  object IniDzialka: TIniPropStorage
+    StoredValues = <    
+      item
+        Name = 'mySQLSerwer'
+        Value = 'localhost'
+        KeyString = 'mySQLSerwer'
+      end    
+      item
+        Name = 'mySQLDBName'
+        Value = 'rod'
+        KeyString = 'mySQLDBName'
+      end    
+      item
+        Name = 'mySQLUserName'
+        Value = 'pawel'
+        KeyString = 'mySQLUserName'
+      end    
+      item
+        Name = 'mySQLUserPass'
+        Value = 'pawel123'
+        KeyString = 'mySQLUserPass'
+      end>
+    IniFileName = 'rod.ini'
+    IniSection = 'DZILKA'
+    left = 492
+    top = 52
+  end
+  object sqlDzialka1: TSQLQuery
+    PacketRecords = 1
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'numer'
+        DataType = ftString
+        Precision = -1
+        Size = 24
+      end    
+      item
+        Name = 'metraz'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'imie'
+        DataType = ftString
+        Precision = -1
+        Size = 96
+      end    
+      item
+        Name = 'nazwisko'
+        DataType = ftString
+        Precision = -1
+        Size = 192
+      end>
+    Active = True
+    Database = MySQLCon
+    Transaction = trDzialka
+    SQL.Strings = (
+      'select  da.numer, da.metraz, dc.imie, dc.nazwisko from pjrod_dzialka as da, pjrod_dzialkowiec as dc'
+      'where da.id_dzialka=dc.id_dzialka'
+    )
+    Params = <>
+    left = 700
+    top = 108
+    object sqlDzialka1nazwisko: TStringField
+      DisplayWidth = 192
+      FieldKind = fkData
+      FieldName = 'nazwisko'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 192
+    end
+    object sqlDzialka1imie: TStringField
+      DisplayWidth = 96
+      FieldKind = fkData
+      FieldName = 'imie'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 96
+    end
+    object sqlDzialka1numer: TStringField
+      DisplayWidth = 24
+      FieldKind = fkData
+      FieldName = 'numer'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 24
+    end
+    object sqlDzialka1metraz: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'metraz'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object dsDzialka: TDatasource
+    DataSet = sqlDzialka1
+    Enabled = False
+    left = 700
+    top = 164
+  end
+  object trDzialka: TSQLTransaction
+    Active = True
+    Action = caCommit
+    Database = MySQLCon
+    left = 700
+    top = 220
+  end
+  object MySQLCon: TMySQL55Connection
+    Connected = True
+    LoginPrompt = True
+    DatabaseName = 'rod'
+    KeepConnection = True
+    Password = 'pawel123'
+    Transaction = trDzialka
+    UserName = 'pawel'
+    CharSet = 'UTF8'
+    HostName = 'localhost'
+    LogEvents = []
+    left = 700
+    top = 276
+  end
+  object logDzialka: TEventLog
+    AppendContent = False
+    Identification = 'DZIAŁKA'
+    LogType = ltFile
+    Active = False
+    RaiseExceptionOnError = True
+    DefaultEventType = etInfo
+    FileName = 'rod-log.txt'
+    TimeStampFormat = 'YYYY-MM-DD hh:nn:ss '
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    left = 460
+    top = 52
+  end
+end

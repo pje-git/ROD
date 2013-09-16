@@ -7,8 +7,16 @@ interface
 uses
   mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
   StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
-  IniPropStorage, DbCtrls, BarChart, DividerBevel, IpHtml, Ipfilebroker,
-  ubarcodes, cyColorMatrix, FZDB, JDBGridControl, udm, PJGlobal, eventlog,
+  IniPropStorage, DbCtrls, BarChart, ExtDlgs, PopupNotifier, DividerBevel,
+  TreeFilterEdit, LvlGraphCtrl, ShortPathEdit, ListFilterEdit, IpHtml,
+  Ipfilebroker, ovcvlb, TplShapesUnit, VirtualTrees, vte_configtree,
+  vte_treedata, vte_json, vte_initree, CodyCtrls, rxctrls, RxViewsPanel, RxMDI,
+  pagemngr, duallist, BGRAKnob, BGRALabelFX, BGRAFlashProgressBar, BCLabel,
+  OWLComps, OWLStateComps, LSControls, SpkToolbar, spkt_Tab, spkt_Pane,
+  spkt_Buttons, spkt_Checkboxes, SpiderForm, ELDsgxObjectInsp, ELDsgxSurface,
+  TplShapeProgressUnit, TplLCDScreenUnit, TplStatusBarUnit, VpCalendar,
+  ubarcodes, cyColorMatrix, FZDB, FZCommon, FZBase, JDBGridControl, udm,
+  PJGlobal, ToggleLabel, WizardControls, LuiConfig, logtreeview, eventlog,
   Classes;
 
 type
@@ -25,15 +33,18 @@ type
     aWoda: TAction;
     aEnergia: TAction;
     alGlowny: TActionList;
-    Button1: TButton;
+    CodyTreeView1: TCodyTreeView;
     dsDzialka: TDatasource;
     Edit1: TEdit;
-    dbgDzialki: TFZDBGrid;
+    bDziaki: TFZDropDownButton;
+    FZDropDownButton2: TFZDropDownButton;
+    FZDropDownButton3: TFZDropDownButton;
+    FZDropDownButton4: TFZDropDownButton;
+    FZDropDownButton5: TFZDropDownButton;
     logDzialka: TEventLog;
     IniDzialka: TIniPropStorage;
-    Label1: TLabel;
     Label2: TLabel;
-    lStatus: TLabel;
+    LSTrayIcon1: TLSTrayIcon;
     mSets: TMenuItem;
     mAdmin: TMenuItem;
     mMaintenance: TMenuItem;
@@ -55,33 +66,61 @@ type
     mFile: TMenuItem;
     mObsluga: TMenuItem;
     mKsiegowosc: TMenuItem;
-    pStatus: TPanel;
-    rStatus: TShape;
+    pgConfig: TTabSheet;
+    tbGlowny: TPageControl;
+    pGlowny: TPanel;
+    SpkCheckbox1: TSpkCheckbox;
+    SpkCheckbox2: TSpkCheckbox;
+    SpkCheckbox3: TSpkCheckbox;
+    SpkLargeButton1: TSpkLargeButton;
+    SpkLargeButton2: TSpkLargeButton;
+    SpkLargeButton3: TSpkLargeButton;
+    SpkLargeButton4: TSpkLargeButton;
+    SpkPane1: TSpkPane;
+    SpkPane2: TSpkPane;
+    SpkPane3: TSpkPane;
+    SpkRadioButton1: TSpkRadioButton;
+    SpkRadioButton2: TSpkRadioButton;
+    SpkRadioButton3: TSpkRadioButton;
+    SpkRadioButton4: TSpkRadioButton;
+    SpkRadioButton5: TSpkRadioButton;
+    SpkSmallButton1: TSpkSmallButton;
+    SpkSmallButton2: TSpkSmallButton;
+    SpkSmallButton3: TSpkSmallButton;
+    SpkSmallButton4: TSpkSmallButton;
+    SpkSmallButton5: TSpkSmallButton;
+    SpkTab1: TSpkTab;
+    SpkTab2: TSpkTab;
+    SpkTab3: TSpkTab;
+    SpkTab4: TSpkTab;
+    SpkTab5: TSpkTab;
+    SpkTab6: TSpkTab;
     sqlDzialka1: TSQLQuery;
     sqlDzialka1imie: TStringField;
     sqlDzialka1metraz: TLongintField;
     sqlDzialka1nazwisko: TStringField;
     sqlDzialka1numer: TStringField;
+    sbGlowny: TStatusBar;
+    pgModyly: TTabSheet;
+    pgSzukaj: TTabSheet;
+    pgLista: TTabSheet;
     trDzialka: TSQLTransaction;
-    StatusBar1: TStatusBar;
-    ToolBar1: TToolBar;
-    ToolButton1: TToolButton;
-    ToolButton2: TToolButton;
-    ToolButton3: TToolButton;
-    ToolButton4: TToolButton;
-    ToolButton5: TToolButton;
+    TreeFilterEdit1: TTreeFilterEdit;
     procedure aSprzedarzExecute(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
     procedure Edit1Enter(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure mSprzedarzClick(Sender: TObject);
+    procedure MySQLConAfterConnect(Sender: TObject);
     procedure MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
       const Msg: String);
+    procedure Panel1Click(Sender: TObject);
     procedure sqlDzialka1BeforeClose(DataSet: TDataSet);
     procedure ToolButton1Click(Sender: TObject);
   private
+    const POLACZONO_Z_BAZA: String = 'Połączono z bazą ';
+    const NIE_POLACZONO_Z_BAZA: String = 'Nie połączono z bazą ';
     procedure ConnectToMySQL55;
     { private declarations }
   public
@@ -110,10 +149,24 @@ begin
   aSprzedarz.Execute;
 end;
 
+procedure TFGlowny.MySQLConAfterConnect(Sender: TObject);
+begin
+
+  with MySQLCon do begin
+    if Connected then sbGlowny.Panels.Items[1].Text := POLACZONO_Z_BAZA + DatabaseName
+    else sbGlowny.Panels.Items[1].Text := NIE_POLACZONO_Z_BAZA + DatabaseName;
+  end;
+end;
+
 procedure TFGlowny.MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
   const Msg: String);
 begin
   logDzialka.Info(Msg);
+end;
+
+procedure TFGlowny.Panel1Click(Sender: TObject);
+begin
+
 end;
 
 procedure TFGlowny.sqlDzialka1BeforeClose(DataSet: TDataSet);
@@ -142,21 +195,6 @@ end;
 procedure TFGlowny.aSprzedarzExecute(Sender: TObject);
 begin
   Edit1.Text:='Dupa blada';
-end;
-
-procedure TFGlowny.Button1Click(Sender: TObject);
-begin
-  ConnectToMySQL55;
-  if DataModuleROD.MySQLCon.Connected then begin
-    sqlDzialka1.ExecSQL;
-    sqlDzialka1.Active:=TRUE;
-    dsDzialka.Enabled:=TRUE;
-    dbgDzialki.Enabled:=TRUE;
-    dbgDzialki.Refresh;
-  end else begin
-    sqlDzialka1.Active:=FALSE;
-    dsDzialka.Enabled:=FALSE;
-  end;
 end;
 
 procedure TFGlowny.Edit1Enter(Sender: TObject);

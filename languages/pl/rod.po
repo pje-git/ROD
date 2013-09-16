@@ -11,80 +11,261 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #: tfdzialka.caption
-msgid "ROD -> Działka"
+msgid "ROD - Działka"
+msgstr ""
+
+#: tfdzialki.aclose.caption
+msgctxt "TFDZIALKI.ACLOSE.CAPTION"
+msgid "&Koniec"
+msgstr ""
+
+#: tfdzialki.adzialkowiec.caption
+msgctxt "TFDZIALKI.ADZIALKOWIEC.CAPTION"
+msgid "&Działkowiec"
+msgstr ""
+
+#: tfdzialki.aenergia.caption
+msgctxt "TFDZIALKI.AENERGIA.CAPTION"
+msgid "&Energia"
+msgstr ""
+
+#: tfdzialki.aexport.caption
+msgctxt "TFDZIALKI.AEXPORT.CAPTION"
+msgid "&Eksport"
+msgstr ""
+
+#: tfdzialki.aimport.caption
+msgctxt "TFDZIALKI.AIMPORT.CAPTION"
+msgid "&Import"
+msgstr ""
+
+#: tfdzialki.asala.caption
+msgctxt "TFDZIALKI.ASALA.CAPTION"
+msgid "&Sala"
+msgstr ""
+
+#: tfdzialki.asprzedarz.caption
+msgctxt "TFDZIALKI.ASPRZEDARZ.CAPTION"
+msgid "&Sprzedarz działki"
+msgstr ""
+
+#: tfdzialki.awoda.caption
+msgctxt "TFDZIALKI.AWODA.CAPTION"
+msgid "&Woda"
+msgstr ""
+
+#: tfdzialki.button1.caption
+msgctxt "TFDZIALKI.BUTTON1.CAPTION"
+msgid "Połącz"
+msgstr ""
+
+#: tfdzialki.caption
+msgid "ROD - Działki"
+msgstr ""
+
+#: tfdzialki.dbgdzialki.columns[0].title.caption
+msgctxt "TFDZIALKI.DBGDZIALKI.COLUMNS[0].TITLE.CAPTION"
+msgid "Numer"
+msgstr ""
+
+#: tfdzialki.dbgdzialki.columns[1].title.caption
+msgctxt "TFDZIALKI.DBGDZIALKI.COLUMNS[1].TITLE.CAPTION"
+msgid "Imię"
+msgstr ""
+
+#: tfdzialki.dbgdzialki.columns[2].title.caption
+msgctxt "TFDZIALKI.DBGDZIALKI.COLUMNS[2].TITLE.CAPTION"
+msgid "Nazwisko"
+msgstr ""
+
+#: tfdzialki.dbgdzialki.columns[3].title.caption
+msgctxt "TFDZIALKI.DBGDZIALKI.COLUMNS[3].TITLE.CAPTION"
+msgid "Obszar"
+msgstr ""
+
+#: tfdzialki.edit1.hint
+msgctxt "TFDZIALKI.EDIT1.HINT"
+msgid "Podaj numer działki lub nazwisko właściciela"
+msgstr ""
+
+#: tfdzialki.edit1.text
+msgctxt "TFDZIALKI.EDIT1.TEXT"
+msgid "Podaj numer"
+msgstr ""
+
+#: tfdzialki.label1.caption
+msgctxt "TFDZIALKI.LABEL1.CAPTION"
+msgid "&Działka :"
+msgstr ""
+
+#: tfdzialki.label2.caption
+msgctxt "TFDZIALKI.LABEL2.CAPTION"
+msgid "&Działka :"
+msgstr ""
+
+#: tfdzialki.lstatus.caption
+msgctxt "TFDZIALKI.LSTATUS.CAPTION"
+msgid "Nie połączono z bazą danych"
+msgstr ""
+
+#: tfdzialki.madmin.caption
+msgctxt "TFDZIALKI.MADMIN.CAPTION"
+msgid "&Administracja"
+msgstr ""
+
+#: tfdzialki.mfile.caption
+msgctxt "TFDZIALKI.MFILE.CAPTION"
+msgid "&Plik"
+msgstr ""
+
+#: tfdzialki.mksiegowosc.caption
+msgctxt "TFDZIALKI.MKSIEGOWOSC.CAPTION"
+msgid "&Księgowość"
+msgstr ""
+
+#: tfdzialki.mmaintenance.caption
+msgctxt "TFDZIALKI.MMAINTENANCE.CAPTION"
+msgid "&Konserwacja"
+msgstr ""
+
+#: tfdzialki.mnarzedzia.caption
+msgctxt "TFDZIALKI.MNARZEDZIA.CAPTION"
+msgid "&Narzędzia"
+msgstr ""
+
+#: tfdzialki.mobsluga.caption
+msgctxt "TFDZIALKI.MOBSLUGA.CAPTION"
+msgid "&Obsługa"
+msgstr ""
+
+#: tfdzialki.mpomoc.caption
+msgctxt "TFDZIALKI.MPOMOC.CAPTION"
+msgid "&Pomoc"
+msgstr ""
+
+#: tfdzialki.mrozliczenia.caption
+msgctxt "TFDZIALKI.MROZLICZENIA.CAPTION"
+msgid "&Rozliczenie"
+msgstr ""
+
+#: tfdzialki.msets.caption
+msgctxt "TFDZIALKI.MSETS.CAPTION"
+msgid "&Ustawienia"
+msgstr ""
+
+#: tfdzialki.mwalne.caption
+msgctxt "TFDZIALKI.MWALNE.CAPTION"
+msgid "&Walne zebranie"
+msgstr ""
+
+#: tfdzialki.mzarzad.caption
+msgctxt "TFDZIALKI.MZARZAD.CAPTION"
+msgid "&Zarząd"
+msgstr ""
+
+#: tfdzialki.toolbar1.caption
+msgctxt "TFDZIALKI.TOOLBAR1.CAPTION"
+msgid "ToolBar1"
+msgstr ""
+
+#: tfdzialki.toolbutton1.caption
+msgctxt "TFDZIALKI.TOOLBUTTON1.CAPTION"
+msgid "A"
+msgstr ""
+
+#: tfdzialki.toolbutton2.caption
+msgctxt "TFDZIALKI.TOOLBUTTON2.CAPTION"
+msgid "ToolButton2"
+msgstr ""
+
+#: tfdzialki.toolbutton3.caption
+msgctxt "TFDZIALKI.TOOLBUTTON3.CAPTION"
+msgid "ToolButton3"
+msgstr ""
+
+#: tfdzialki.toolbutton4.caption
+msgctxt "TFDZIALKI.TOOLBUTTON4.CAPTION"
+msgid "ToolButton4"
+msgstr ""
+
+#: tfdzialki.toolbutton5.caption
+msgctxt "TFDZIALKI.TOOLBUTTON5.CAPTION"
+msgid "ToolButton5"
 msgstr ""
 
 #: tfglowny.aclose.caption
+msgctxt "tfglowny.aclose.caption"
 msgid "&Koniec"
 msgstr ""
 
 #: tfglowny.adzialkowiec.caption
+msgctxt "tfglowny.adzialkowiec.caption"
 msgid "&Działkowiec"
 msgstr ""
 
 #: tfglowny.aenergia.caption
+msgctxt "tfglowny.aenergia.caption"
 msgid "&Energia"
 msgstr ""
 
 #: tfglowny.aexport.caption
+msgctxt "tfglowny.aexport.caption"
 msgid "&Eksport"
 msgstr ""
 
 #: tfglowny.aimport.caption
+msgctxt "tfglowny.aimport.caption"
 msgid "&Import"
 msgstr ""
 
 #: tfglowny.asala.caption
+msgctxt "tfglowny.asala.caption"
 msgid "&Sala"
 msgstr ""
 
 #: tfglowny.asprzedarz.caption
+msgctxt "tfglowny.asprzedarz.caption"
 msgid "&Sprzedarz działki"
 msgstr ""
 
 #: tfglowny.awoda.caption
+msgctxt "tfglowny.awoda.caption"
 msgid "&Woda"
 msgstr ""
 
-#: tfglowny.button1.caption
-msgid "Połącz"
+#: tfglowny.bdziaki.caption
+msgctxt "TFGLOWNY.BDZIAKI.CAPTION"
+msgid "Działki"
 msgstr ""
 
 #: tfglowny.caption
 msgid "ROD - Zarządzanie"
 msgstr ""
 
-#: tfglowny.dbgdzialki.columns[0].title.caption
-msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[0].TITLE.CAPTION"
-msgid "Numer"
-msgstr ""
-
-#: tfglowny.dbgdzialki.columns[1].title.caption
-msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[1].TITLE.CAPTION"
-msgid "Imię"
-msgstr ""
-
-#: tfglowny.dbgdzialki.columns[2].title.caption
-msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[2].TITLE.CAPTION"
-msgid "Nazwisko"
-msgstr ""
-
-#: tfglowny.dbgdzialki.columns[3].title.caption
-msgctxt "TFGLOWNY.DBGDZIALKI.COLUMNS[3].TITLE.CAPTION"
-msgid "Obszar"
-msgstr ""
-
 #: tfglowny.edit1.hint
+msgctxt "tfglowny.edit1.hint"
 msgid "Podaj numer działki lub nazwisko właściciela"
 msgstr ""
 
 #: tfglowny.edit1.text
+msgctxt "tfglowny.edit1.text"
 msgid "Podaj numer"
 msgstr ""
 
-#: tfglowny.label1.caption
-msgctxt "tfglowny.label1.caption"
-msgid "&Działka :"
+#: tfglowny.fzdropdownbutton2.caption
+msgid "Działkowcy"
+msgstr ""
+
+#: tfglowny.fzdropdownbutton3.caption
+msgid "Media"
+msgstr ""
+
+#: tfglowny.fzdropdownbutton4.caption
+msgid "Sala"
+msgstr ""
+
+#: tfglowny.fzdropdownbutton5.caption
+msgid "Księgowość"
 msgstr ""
 
 #: tfglowny.label2.caption
@@ -92,75 +273,87 @@ msgctxt "TFGLOWNY.LABEL2.CAPTION"
 msgid "&Działka :"
 msgstr ""
 
-#: tfglowny.lstatus.caption
-msgid "Nie połączono z bazą danych"
-msgstr ""
-
 #: tfglowny.madmin.caption
+msgctxt "tfglowny.madmin.caption"
 msgid "&Administracja"
 msgstr ""
 
 #: tfglowny.mfile.caption
+msgctxt "tfglowny.mfile.caption"
 msgid "&Plik"
 msgstr ""
 
 #: tfglowny.mksiegowosc.caption
+msgctxt "tfglowny.mksiegowosc.caption"
 msgid "&Księgowość"
 msgstr ""
 
 #: tfglowny.mmaintenance.caption
+msgctxt "tfglowny.mmaintenance.caption"
 msgid "&Konserwacja"
 msgstr ""
 
 #: tfglowny.mnarzedzia.caption
+msgctxt "tfglowny.mnarzedzia.caption"
 msgid "&Narzędzia"
 msgstr ""
 
 #: tfglowny.mobsluga.caption
+msgctxt "tfglowny.mobsluga.caption"
 msgid "&Obsługa"
 msgstr ""
 
 #: tfglowny.mpomoc.caption
+msgctxt "tfglowny.mpomoc.caption"
 msgid "&Pomoc"
 msgstr ""
 
 #: tfglowny.mrozliczenia.caption
+msgctxt "tfglowny.mrozliczenia.caption"
 msgid "&Rozliczenie"
 msgstr ""
 
 #: tfglowny.msets.caption
+msgctxt "tfglowny.msets.caption"
 msgid "&Ustawienia"
 msgstr ""
 
 #: tfglowny.mwalne.caption
+msgctxt "tfglowny.mwalne.caption"
 msgid "&Walne zebranie"
 msgstr ""
 
 #: tfglowny.mzarzad.caption
+msgctxt "tfglowny.mzarzad.caption"
 msgid "&Zarząd"
 msgstr ""
 
-#: tfglowny.toolbar1.caption
-msgid "ToolBar1"
+#: tfglowny.pgconfig.caption
+msgid "Ustawienia"
 msgstr ""
 
-#: tfglowny.toolbutton1.caption
-msgid "A"
+#: tfglowny.pglista.caption
+msgid "Lista"
 msgstr ""
 
-#: tfglowny.toolbutton2.caption
-msgid "ToolButton2"
+#: tfglowny.pgmodyly.caption
+msgid "Moduły"
 msgstr ""
 
-#: tfglowny.toolbutton3.caption
-msgid "ToolButton3"
+#: tfglowny.pgszukaj.caption
+msgid "Szukaj"
 msgstr ""
 
-#: tfglowny.toolbutton4.caption
-msgid "ToolButton4"
+#: tfglowny.sbglowny.panels[0].text
+msgctxt "TFGLOWNY.SBGLOWNY.PANELS[0].TEXT"
+msgid "Moduł główny - ZARZĄDZANIE"
 msgstr ""
 
-#: tfglowny.toolbutton5.caption
-msgid "ToolButton5"
+#: tfglowny.sbglowny.panels[1].text
+msgid "Połączono z bazą "
+msgstr ""
+
+#: tfglowny.sbglowny.panels[2].text
+msgid "Licencja dla ROD \"Trzy Korony\" Pabianice     "
 msgstr ""
 

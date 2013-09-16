@@ -1,4 +1,4 @@
-unit uStringsPL;
+unit UStringsPL;
 
 {$mode objfpc}{$H+}
 
