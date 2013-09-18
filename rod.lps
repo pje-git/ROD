@@ -9,10 +9,10 @@
         <Filename Value="rod.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="rod"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="43" Y="21"/>
+        <CursorPos X="1" Y="22"/>
         <UsageCount Value="238"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -23,11 +23,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UGlowny"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="109"/>
-        <CursorPos X="62" Y="128"/>
+        <TopLine Value="135"/>
+        <CursorPos X="1" Y="153"/>
         <UsageCount Value="238"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -35,14 +34,15 @@
       <Unit2>
         <Filename Value="uenergia.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="FormEnergia"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UEnergia"/>
-        <EditorIndex Value="2"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="61" Y="11"/>
+        <TopLine Value="2"/>
+        <CursorPos X="14" Y="13"/>
         <UsageCount Value="218"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -92,8 +92,8 @@
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="14" Y="1"/>
-        <UsageCount Value="70"/>
+        <CursorPos X="29" Y="15"/>
+        <UsageCount Value="167"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
@@ -106,19 +106,19 @@
         <UnitName Value="UDzialki"/>
         <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
+        <TopLine Value="9"/>
         <CursorPos X="7" Y="1"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="165"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
       <Unit8>
-        <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\sqldb\sqldb.pp"/>
-        <UnitName Value="sqldb"/>
+        <Filename Value="C:\codetyphon\typhon\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="454"/>
-        <CursorPos X="22" Y="466"/>
-        <UsageCount Value="0"/>
+        <TopLine Value="183"/>
+        <CursorPos X="17" Y="575"/>
+        <UsageCount Value="10"/>
       </Unit8>
     </Units>
     <General>
@@ -127,123 +127,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="101"/>
+        <Caret Line="109" Column="1" TopLine="97"/>
       </Position1>
       <Position2>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="101"/>
+        <Caret Line="112" Column="1" TopLine="101"/>
       </Position2>
       <Position3>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="123" Column="62" TopLine="102"/>
+        <Caret Line="153" Column="1" TopLine="134"/>
       </Position3>
       <Position4>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="124" Column="62" TopLine="102"/>
+        <Caret Line="155" Column="47" TopLine="134"/>
       </Position4>
       <Position5>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="123" Column="62" TopLine="102"/>
+        <Caret Line="153" Column="1" TopLine="134"/>
       </Position5>
       <Position6>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="102"/>
+        <Caret Line="155" Column="50" TopLine="134"/>
       </Position6>
       <Position7>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="123" Column="62" TopLine="102"/>
+        <Caret Line="153" Column="1" TopLine="134"/>
       </Position7>
       <Position8>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="102"/>
+        <Caret Line="154" Column="1" TopLine="134"/>
       </Position8>
       <Position9>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="102"/>
+        <Caret Line="155" Column="1" TopLine="134"/>
       </Position9>
       <Position10>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="103"/>
+        <Caret Line="156" Column="1" TopLine="134"/>
       </Position10>
       <Position11>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="102"/>
+        <Caret Line="15" Column="19" TopLine="3"/>
       </Position11>
       <Position12>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="103"/>
+        <Caret Line="117" Column="36" TopLine="107"/>
       </Position12>
       <Position13>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="102"/>
+        <Caret Line="154" Column="59" TopLine="135"/>
       </Position13>
       <Position14>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="103"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="1" Column="14" TopLine="1"/>
       </Position14>
       <Position15>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="102"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="10" Column="34" TopLine="1"/>
       </Position15>
       <Position16>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="103"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="1" Column="14" TopLine="1"/>
       </Position16>
       <Position17>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="102"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="8" Column="29" TopLine="1"/>
       </Position17>
       <Position18>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="103"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="1" Column="6" TopLine="1"/>
       </Position18>
       <Position19>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="102"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="8" Column="16" TopLine="1"/>
       </Position19>
       <Position20>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="122" Column="62" TopLine="103"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="14" Column="16" TopLine="1"/>
       </Position20>
       <Position21>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="121" Column="62" TopLine="102"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="1" Column="6" TopLine="1"/>
       </Position21>
       <Position22>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="123" Column="62" TopLine="104"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="17" Column="32" TopLine="5"/>
       </Position22>
       <Position23>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="124" Column="62" TopLine="105"/>
+        <Filename Value="udzialka.pas"/>
+        <Caret Line="1" Column="14" TopLine="1"/>
       </Position23>
       <Position24>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="123" Column="62" TopLine="104"/>
+        <Filename Value="udzialka.pas"/>
+        <Caret Line="8" Column="112" TopLine="1"/>
       </Position24>
       <Position25>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="124" Column="62" TopLine="105"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="8" Column="26" TopLine="1"/>
       </Position25>
       <Position26>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="125" Column="62" TopLine="106"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="14" Column="8" TopLine="3"/>
       </Position26>
       <Position27>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="126" Column="62" TopLine="107"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="26" Column="11" TopLine="8"/>
       </Position27>
       <Position28>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="127" Column="62" TopLine="108"/>
+        <Caret Line="157" Column="11" TopLine="133"/>
       </Position28>
       <Position29>
         <Filename Value="uglowny.pas"/>
-        <Caret Line="128" Column="62" TopLine="109"/>
+        <Caret Line="155" Column="27" TopLine="136"/>
       </Position29>
       <Position30>
-        <Filename Value="uglowny.pas"/>
-        <Caret Line="127" Column="62" TopLine="108"/>
+        <Filename Value="uenergia.pas"/>
+        <Caret Line="13" Column="41" TopLine="1"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

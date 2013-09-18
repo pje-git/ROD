@@ -5,11 +5,17 @@ unit UEnergia;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, ExtendedNotebook, Forms, Controls, Graphics,
-  Dialogs, ComCtrls, ExtCtrls;
+  Forms, ComCtrls, ExtendedNotebook;
 
 type
-  TFormEnergia = class(TForm)
+
+  { TFEnergia }
+
+  TFEnergia = class(TForm)
+    emEnergia: TExtendedNotebook;
+    tsRozliczenie: TTabSheet;
+    tsUstawienia: TTabSheet;
+    tsWydruk: TTabSheet;
   private
     { private declarations }
   public
@@ -17,7 +23,7 @@ type
   end;
 
 var
-  FormEnergia: TFormEnergia;
+  fEnergia: TFEnergia;
 
 implementation
 

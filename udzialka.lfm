@@ -4,5 +4,22 @@ object fDzialka: TfDzialka
   Top = 219
   Width = 596
   Caption = 'ROD - Działka'
+  ClientHeight = 443
+  ClientWidth = 596
   LCLVersion = '1.1'
+  object ExtendedNotebook1: TExtendedNotebook
+    Left = 248
+    Height = 200
+    Top = 136
+    Width = 200
+    ActivePage = TabSheet4
+    TabIndex = 1
+    TabOrder = 0
+    object TabSheet3: TTabSheet
+      Caption = 'TabSheet3'
+    end
+    object TabSheet4: TTabSheet
+      Caption = 'TabSheet4'
+    end
+  end
 end

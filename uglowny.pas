@@ -5,19 +5,14 @@ unit UGlowny;
 interface
 
 uses
-  mysql55conn, sqldb, db, BufDataset, memds, dbf, SdfData, Forms, ExtCtrls,
-  StdCtrls, ComCtrls, Menus, ActnList, DBGrids, Calendar, EditBtn,
-  IniPropStorage, DbCtrls, BarChart, ExtDlgs, PopupNotifier, DividerBevel,
-  TreeFilterEdit, LvlGraphCtrl, ShortPathEdit, ListFilterEdit, IpHtml,
-  Ipfilebroker, ovcvlb, TplShapesUnit, VirtualTrees, vte_configtree,
-  vte_treedata, vte_json, vte_initree, CodyCtrls, rxctrls, RxViewsPanel, RxMDI,
-  pagemngr, duallist, BGRAKnob, BGRALabelFX, BGRAFlashProgressBar, BCLabel,
-  OWLComps, OWLStateComps, LSControls, SpkToolbar, spkt_Tab, spkt_Pane,
-  spkt_Buttons, spkt_Checkboxes, SpiderForm, ELDsgxObjectInsp, ELDsgxSurface,
-  TplShapeProgressUnit, TplLCDScreenUnit, TplStatusBarUnit, VpCalendar,
-  ubarcodes, cyColorMatrix, FZDB, FZCommon, FZBase, JDBGridControl, udm,
-  PJGlobal, ToggleLabel, WizardControls, LuiConfig, logtreeview, eventlog,
-  Classes;
+  mysql55conn, sqldb, db, Forms, ExtCtrls,
+  StdCtrls, ComCtrls, Menus, ActnList,
+  IniPropStorage,
+  TreeFilterEdit, CodyCtrls, LSControls, spkt_Tab, spkt_Pane,
+  spkt_Buttons, spkt_Checkboxes, FZCommon, eventlog,
+
+//  formy
+  UEnergia, UDzialka;
 
 type
 
@@ -44,7 +39,7 @@ type
     logDzialka: TEventLog;
     IniDzialka: TIniPropStorage;
     Label2: TLabel;
-    LSTrayIcon1: TLSTrayIcon;
+    tiROD: TLSTrayIcon;
     mSets: TMenuItem;
     mAdmin: TMenuItem;
     mMaintenance: TMenuItem;
@@ -106,22 +101,14 @@ type
     pgLista: TTabSheet;
     trDzialka: TSQLTransaction;
     TreeFilterEdit1: TTreeFilterEdit;
-    procedure aSprzedarzExecute(Sender: TObject);
-    procedure Edit1Enter(Sender: TObject);
-    procedure FormActivate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    procedure mSprzedarzClick(Sender: TObject);
+    procedure FZDropDownButton3Click(Sender: TObject);
     procedure MySQLConAfterConnect(Sender: TObject);
     procedure MySQLConLog(Sender: TSQLConnection; EventType: TDBEventType;
       const Msg: String);
-    procedure Panel1Click(Sender: TObject);
-    procedure sqlDzialka1BeforeClose(DataSet: TDataSet);
-    procedure ToolButton1Click(Sender: TObject);
   private
     const POLACZONO_Z_BAZA: String = 'Połączono z bazą ';
     const NIE_POLACZONO_Z_BAZA: String = 'Nie połączono z bazą ';
-    procedure ConnectToMySQL55;
     { private declarations }
   public
     { public declarations }
@@ -129,9 +116,10 @@ type
 
 var
   FGlowny: TFGlowny;
-{
-MySQLConn: TMySQL55Connection;
-}
+  //FormEnergia: TFormEnergia;
+  //FEnergia: TForEnergia;
+  //MySQLConn: TMySQL55Connection;
+
 
 implementation
 
@@ -139,19 +127,8 @@ implementation
 
 { TFGlowny }
 
-procedure CosTam(s: String);
-begin
-
-end;
-
-procedure TFGlowny.mSprzedarzClick(Sender: TObject);
-begin
-  aSprzedarz.Execute;
-end;
-
 procedure TFGlowny.MySQLConAfterConnect(Sender: TObject);
 begin
-
   with MySQLCon do begin
     if Connected then sbGlowny.Panels.Items[1].Text := POLACZONO_Z_BAZA + DatabaseName
     else sbGlowny.Panels.Items[1].Text := NIE_POLACZONO_Z_BAZA + DatabaseName;
@@ -164,57 +141,21 @@ begin
   logDzialka.Info(Msg);
 end;
 
-procedure TFGlowny.Panel1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TFGlowny.sqlDzialka1BeforeClose(DataSet: TDataSet);
-begin
-end;
-procedure TFGlowny.ToolButton1Click(Sender: TObject);
-begin
-   sqlDzialka1.ExecSQL;
-end;
-
-procedure TFGlowny.ConnectToMySQL55;
-begin
-  with DataModuleROD.MySQLCon do if Connected = FALSE then Connected:=True
-    else Connected:=False;
-end;
 
 procedure TFGlowny.FormCreate(Sender: TObject);
 begin
   sqlDzialka1.Active:=TRUE;
-//  DataModuleROD.lStatusMsg:=lStatus;
-//  DataModuleROD.rStatusShape:=rStatus;
-//  DataModuleROD.bConnect:=Button1;
-//  ConnectToMySQL55;
 end;
 
-procedure TFGlowny.aSprzedarzExecute(Sender: TObject);
+procedure TFGlowny.FZDropDownButton3Click(Sender: TObject);
 begin
-  Edit1.Text:='Dupa blada';
+  if not Assigned (fEnergia) then    // sprawdzasz czy istnieje
+       fEnergia := TFEnergia.Create(fEnergia);  //jeżeli nie to tworzysz
+  fEnergia.Show
+  //if not Assigned (fDzialka) then    // sprawdzasz czy istnieje
+  //     fDzialka := TFDzialka.Create(fDzialka);  //jeżeli nie to tworzysz
+  //fDzialka.Show
 end;
-
-procedure TFGlowny.Edit1Enter(Sender: TObject);
-begin
-  if Edit1.Text = 'Podaj numer' then Edit1.Text := '';
-end;
-
-procedure TFGlowny.FormActivate(Sender: TObject);
-begin
-
-end;
-
-procedure TFGlowny.FormClose(Sender: TObject; var CloseAction: TCloseAction);
-begin
-//    trDzialka.Commit;
-//    trDzialka.EndTransaction;
-//    trDzialka.Active:=FALSE;
-
-end;
-
 
 end.
 

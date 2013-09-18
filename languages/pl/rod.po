@@ -14,6 +14,14 @@ msgstr ""
 msgid "ROD - Działka"
 msgstr ""
 
+#: tfdzialka.tabsheet3.caption
+msgid "TabSheet3"
+msgstr ""
+
+#: tfdzialka.tabsheet4.caption
+msgid "TabSheet4"
+msgstr ""
+
 #: tfdzialki.aclose.caption
 msgctxt "TFDZIALKI.ACLOSE.CAPTION"
 msgid "&Koniec"
@@ -329,6 +337,7 @@ msgid "&Zarząd"
 msgstr ""
 
 #: tfglowny.pgconfig.caption
+msgctxt "tfglowny.pgconfig.caption"
 msgid "Ustawienia"
 msgstr ""
 
@@ -355,5 +364,45 @@ msgstr ""
 
 #: tfglowny.sbglowny.panels[2].text
 msgid "Licencja dla ROD \"Trzy Korony\" Pabianice     "
+msgstr ""
+
+#: tform1.caption
+msgctxt "tform1.caption"
+msgid "ROD - Rozliczenir energii"
+msgstr ""
+
+#: tform1.tabsheet1.caption
+msgctxt "tform1.tabsheet1.caption"
+msgid "Rozliczenie"
+msgstr ""
+
+#: tform1.tabsheet2.caption
+msgctxt "tform1.tabsheet2.caption"
+msgid "Wydruk"
+msgstr ""
+
+#: tform1.tabsheet3.caption
+msgctxt "TFORM1.TABSHEET3.CAPTION"
+msgid "Ustawienia"
+msgstr ""
+
+#: tformenergia.caption
+msgctxt "TFORMENERGIA.CAPTION"
+msgid "ROD - Rozliczenir energii"
+msgstr ""
+
+#: tformenergia.tsrozliczenie.caption
+msgctxt "TFORMENERGIA.TSROZLICZENIE.CAPTION"
+msgid "Rozliczenie"
+msgstr ""
+
+#: tformenergia.tsustawienia.caption
+msgctxt "TFORMENERGIA.TSUSTAWIENIA.CAPTION"
+msgid "Ustawienia"
+msgstr ""
+
+#: tformenergia.tswydruk.caption
+msgctxt "TFORMENERGIA.TSWYDRUK.CAPTION"
+msgid "Wydruk"
 msgstr ""
 

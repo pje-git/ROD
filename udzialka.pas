@@ -5,14 +5,16 @@ unit UDzialka;
 interface
 
 uses
-  Classes, SysUtils, process, eventlog, FileUtil, Forms, Controls, Graphics,
-  Dialogs;
+  Forms, ComCtrls, ExtendedNotebook;
 
 type
 
   { TfDzialka }
 
   TfDzialka = class(TForm)
+    ExtendedNotebook1: TExtendedNotebook;
+    TabSheet3: TTabSheet;
+    TabSheet4: TTabSheet;
   private
     { private declarations }
   public

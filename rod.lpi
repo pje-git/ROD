@@ -20,7 +20,7 @@
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="4"/>
+      <BuildNr Value="5"/>
       <Language Value="0415"/>
       <StringTable Comments="Projekt do zarządzania ROD w Trzy Korony w Pabianicach" CompanyName="PJE" FileDescription="Projekt dla ROD Trzy Korony w Pabianicach" InternalName="ROD" LegalCopyright="PJE" LegalTrademarks="PJE" OriginalFilename="PJE ROD" ProductName="ROD Kompleksowy System Zarządzania" ProductVersion="1.0"/>
     </VersionInfo>
@@ -149,7 +149,7 @@
       <Unit2>
         <Filename Value="uenergia.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="FormEnergia"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UEnergia"/>
